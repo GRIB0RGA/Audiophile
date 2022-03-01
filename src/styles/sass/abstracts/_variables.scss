@@ -1,0 +1,27 @@
+//! Colors \\\
+
+$color-primary: #d87d4a;
+$color-primary-light: #fbaf85;
+
+$color-secondary: #0d0d0d;
+$color-secondary-light: #00000080;
+$color-secondary-dark: #000000;
+$color-secondary-2: #0e0e0e; //? useless atm
+$color-secondary-2-see-through: rgba(14, 14, 14, 0.726); //? useless atm
+$color-secondary-2-see-through-2: rgba(14, 14, 14, 0.507); //? useless atm
+
+$color-gray-dark: hsl(0, 0%, 30%);
+$color-gray: hsl(0, 0%, 59%);
+$color-gray-light: hsla(0, 0%, 100%, 0.502);
+
+$color-white-darker: hsl(0, 0%, 98%); //? useless atm
+$color-white-dark: hsl(0, 0%, 95%);
+$color-white: hsl(0, 0%, 100%);
+
+//! Border Radius \\\
+$border-radius-default: 0.8rem;
+
+//! Width \\\
+$width-default: 111rem;
+$width-tablet: 69rem;
+$width-phone: 32rem;

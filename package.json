@@ -1,0 +1,14 @@
+{
+  "name": "audiophile-e-commerce-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node-sass src/styles/sass/main.scss src/styles/styles.css -w"
+  },
+  "author": "Griborga",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

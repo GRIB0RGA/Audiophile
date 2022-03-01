@@ -1,0 +1,29 @@
+.section {
+
+  &__features {
+    display: grid;
+    grid-template-columns: 63.5rem 35rem;
+    gap: 12.5rem;
+    height: 32rem;
+  }
+  &__product-gallery {
+    display: grid;
+    height: 59rem;
+    grid-template-columns: 45rem 63.5rem;
+    grid-template-rows: repeat(2, 28rem);
+    grid-row-gap: 3.2rem;
+    grid-column-gap: 3rem;
+    transition: all 0.3s;
+    &:hover .product-gallery__img:not(:hover) {
+      transform: scale(0.95);
+    }
+  }
+  &__product-suggestions {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 35rem);
+    grid-template-rows: min-content 47rem;
+    grid-column-gap: 3rem;
+    grid-row-gap: 6.4rem;
+  }
+}

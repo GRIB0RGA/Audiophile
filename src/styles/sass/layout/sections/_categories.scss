@@ -1,0 +1,43 @@
+.section__categories {
+  max-width: $width-default;
+  @include flexRowGap(3rem);
+
+  margin: 0 auto;
+  &--main {
+    margin-top: 20rem;
+  }
+  //! Mixins \\\
+  @include respond(tablet) {
+    max-width: $width-tablet;
+    @include flexRowGap(3rem);
+    flex-direction: column;
+    align-items: center;
+    gap: 6.8rem;
+  }
+}
+
+.categories {
+  &__card {
+    background-color: #f1f1f1;
+    width: 35rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    border-radius: $border-radius-default;
+  }
+  &__img {
+    position: absolute;
+    height: 16rem;
+    top: -27%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__heading {
+    margin-top: 10rem;
+  }
+}

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/src/styles/styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <title>Frontend Mentor | Audiophile e-commerce website</title>
+</head>
+
+<body>
+  <header class="header header__categories">
+    <div class="header__container">
+
+      <nav class="navbar">
+
+        <div class="navbar__desktop">
+          <img class="navbar__logo" src="/src/assets/shared/desktop/logo.svg" alt="Logo">
+          <ul class="navbar__list">
+            <li><a href="/src/home.html" class="navbar__link">Home</a></li>
+            <li><a href="/src/components/pages/headphones.html" class="navbar__link">Headphones</a></li>
+            <li><a href="/src/components/pages/speakers.html" class="navbar__link">Speakers</a></li>
+            <li><a href="/src/components/pages/earphones.html" class="navbar__link">Earphones</a></li>
+          </ul>
+          <img class="navbar__icon" src="/src/assets/shared/desktop/icon-cart.svg" alt="cartIcon">
+        </div>
+
+
+        <div class="navbar__tablet">
+
+          <div class="navbar__logo-plus-hamburger">
+            <img class="navbar__hamburger" src="/src/assets/shared/tablet/icon-hamburger.svg" alt="icon-hamburger">
+            <img class="navbar__logo" src="/src/assets/shared/desktop/logo.svg" alt="Logo">
+          </div>
+
+          <img class="navbar__icon" src="/src/assets/shared/desktop/icon-cart.svg" alt="cartIcon">
+        </div>
+
+        <div class="navbar__mobile">
+          <img class="navbar__hamburger" src="/src/assets/shared/tablet/icon-hamburger.svg" alt="icon-hamburger">
+          <img class="navbar__logo" src="/src/assets/shared/desktop/logo.svg" alt="Logo">
+          <img class="navbar__icon" src="/src/assets/shared/desktop/icon-cart.svg" alt="cartIcon">
+        </div>
+
+      </nav>
+
+      <h1 class="heading__2 c-white center">Earphones</h1>
+
+    </div>
+
+
+
+
+
+  </header>
+
+  <main class="main main__pages" id="main">
+
+
+    <div class="zigzag">
+
+      <div class="zigzag__card">
+        <picture>
+          <source media="(max-width:500px)"
+            srcset="/src/assets/product-xx99-mark-two-headphones/mobile/image-category-page-preview.jpg">
+          <source media="(max-width:780px)"
+            srcset="/src/assets/product-xx99-mark-two-headphones/tablet/image-category-page-preview.jpg">
+          <img src="/src/assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg"
+            class="zigzag__image" alt="XX99">
+        </picture>
+
+        <div class="zigzag__title">
+          <p class="overline overline--primary">New product</p>
+          <h1 class="heading__2">XX99 Mark II Headphones</h1>
+          <p class="text text--gray-dark">
+            The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium
+            headphone experience by reproducing the balanced depth and precision of studio-quality sound.
+          </p>
+
+          <a class="btn__primary btn__primary--orange mr-xs-t"
+            href="/src/components/products/headphones/Headphones-XX99-Mark-2/product-xx99-mark-two-headphones.html">See
+            product</a>
+        </div>
+      </div>
+
+      <div class="zigzag__card">
+        <picture>
+          <source media="(max-width:500px)"
+            srcset="/src/assets/product-xx99-mark-one-headphones/mobile/image-category-page-preview.jpg">
+          <source media="(max-width:780px)"
+            srcset="/src/assets/product-xx99-mark-one-headphones/tablet/image-category-page-preview.jpg">
+          <img src="/src/assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg"
+            class="zigzag__image" alt="XX99">
+        </picture>
+
+        <div class="zigzag__title">
+
+          <h1 class="heading__2">XX99 Mark I Headphones</h1>
+          <p class="text text--gray-dark">
+            As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio
+            reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.
+          </p>
+
+          <a class="btn__primary btn__primary--orange mr-xs-t"
+            href="/src/components/products/headphones/Headphones-XX99-Mark-1/product-xx99-mark-one-headphones.html">See
+            product</a>
+        </div>
+      </div>
+
+      <div class="zigzag__card">
+        <picture>
+          <source media="(max-width:500px)"
+            srcset="/src/assets/product-xx59-headphones/mobile/image-category-page-preview.jpg">
+          <source media="(max-width:780px)"
+            srcset="/src/assets/product-xx59-headphones/tablet/image-category-page-preview.jpg"">
+          <img src=" /src/assets/product-xx59-headphones/desktop/image-category-page-preview.jpg""
+            class="zigzag__image" alt="XX59">
+        </picture>
+
+        <div class="zigzag__title">
+
+          <h1 class="heading__2">XX59 Headphones</h1>
+          <p class="text text--gray-dark">
+            Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones.
+            The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.
+          </p>
+
+          <a class="btn__primary btn__primary--orange mr-xs-t"
+            href="/src/components/products/headphones/Headphones-XX59/product-xx59-headphones.html">See
+            product</a>
+        </div>
+      </div>
+
+
+    </div>
+
+    <section class="section__categories">
+      <div class="categories__card categories__headphones">
+        <img class="categories__img" src="/src/assets/shared/desktop/image-category-thumbnail-headphones.png"
+          alt="headphones">
+        <h6 class=" categories__heading heading__6">Headphones</h6>
+        <a class=" btn__text--with-arrow" href="/src/components/pages/headphones.html">Shop</a>
+      </div>
+      <div class="categories__card categories__speakers">
+        <img class="categories__img" src="/src/assets/shared/desktop/image-category-thumbnail-speakers.png"
+          alt="speakers">
+        <h6 class="categories__heading heading__6">Speakers</h6>
+        <a class="btn__text--with-arrow" href="/src/components/pages/speakers.html">Shop</a>
+      </div>
+      <div class="categories__card categories__earphones">
+        <img class="categories__img" src="/src/assets/shared/desktop/image-category-thumbnail-earphones.png"
+          alt="earphones">
+        <h6 class="categories__heading heading__6">Earphones</h6>
+        <a class="btn__text--with-arrow" href="/src/components/pages/earphones.html">Shop</a>
+      </div>
+    </section>
+
+
+    <section class="section__about ">
+
+      <div class="about__title">
+        <h2 class="heading__2">Bringing you the <span>best</span> audio gear</h2>
+        <p class="text text--gray-dark">
+          Located at the heart of New York City, Audiophile is the premier store for high end headphones,
+          earphones, speakers, and audio accessories. We have a large showroom and luxury demonstration
+          rooms available for you to browse and experience a wide range of our products. Stop by our store
+          to meet some of the fantastic people who make Audiophile the best place to buy your portable
+          audio equipment.
+        </p>
+      </div>
+
+      <div class="about__image"></div>
+    </section>
+
+  </main>
+
+
+  <footer id="footer" class="footer">
+    <div class="footer__container">
+      <div class="navbar__footer">
+        <img class="navbar__logo" src="/src/assets/shared/desktop/logo.svg" alt="Logo">
+        <ul class="navbar__list">
+          <li><a href="/src/home.html" class="navbar__link">Home</a></li>
+          <li><a href="/src/components/pages/headphones.html" class="navbar__link">Headphones</a></li>
+          <li><a href="/src/components/pages/speakers.html" class="navbar__link">Speakers</a></li>
+          <li><a href="/src/components/pages/earphones.html" class="navbar__link">Earphones</a></li>
+        </ul>
+
+      </div>
+
+      <div class="footer__grid">
+
+        <p class="footer__paragraph text text--gray ">
+          Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers
+          and sound specialists who are devoted to helping you get the most out of personal audio. Come and
+          visit our demo facility - we’re open 7 days a week.
+        </p>
+        <p class=" footer__copyright text text--gray">Copyright 2021. All Rights Reserved</p>
+
+        <div class="footer__social">
+          <a href=""><img src="/src/assets/shared/desktop/icon-facebook.svg" alt="FbIcon" class="footer__icon"></a>
+          <a href=""><img src="/src/assets/shared/desktop/icon-twitter.svg" alt="TwitterIcon" class="footer__icon"></a>
+          <a href=""><img src="/src/assets/shared/desktop/icon-instagram.svg" alt="InstagramIcon"
+              class="footer__icon"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+</body>
+
+</html>

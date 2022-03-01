@@ -1,0 +1,24 @@
+.header {
+  width: 100%;
+  background-color: $color-secondary-2;
+
+  &__home {
+    @include makeHeader(75rem);
+  }
+  &__categories {
+    @include makeHeader(33.5rem);
+  }
+  &__container {
+    display: grid;
+    width: $width-default;
+    grid-template-rows: 9.6rem 1fr;
+    //! Mixins \\\
+    @include respond(tablet) {
+      max-width: $width-tablet;
+    }
+  }
+  &__products {
+    @include makeHeader(9.6rem);
+  }
+  position: relative;
+}

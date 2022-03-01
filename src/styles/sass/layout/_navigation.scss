@@ -1,0 +1,89 @@
+%navbarType {
+  width: 100%;
+  @include flexAlignCenter;
+}
+
+.navbar {
+  @include flexAlignCenter;
+  //?######################  FOOTER ######################?\\
+  &__footer {
+    @extend %navbarType;
+    justify-content: space-between;
+
+    //! MIXINS \\\
+    @include respond(phone-rotated) {
+      flex-direction: column;
+      gap: 5.2rem;
+      & .navbar__list {
+        flex-direction: column;
+      }
+    }
+  }
+  //?######################  DESKTOP ######################?\\
+  // background-color: red;
+  &__desktop {
+    @extend %navbarType;
+    justify-content: space-between;
+
+    //! MIXINS \\\
+
+    @include respond(desktop) {
+      padding: 0 4rem;
+    }
+    @include respond(tablet) {
+      display: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 3.4rem;
+    align-items: center;
+  }
+  &__link {
+    @include linksAndBtn;
+    transition: all 0.3s;
+    &:hover {
+      color: $color-primary;
+    }
+  }
+  &__icon {
+    cursor: pointer;
+  }
+  //?######################  Tablet ######################?\\
+
+  &__tablet {
+    @extend %navbarType;
+    display: none;
+
+    //! MIXINS \\\
+
+    @include respond(tablet) {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 4rem;
+    }
+    @include respond(phone) {
+      display: none;
+    }
+  }
+  &__logo-plus-hamburger {
+    @include flexAlignCenter;
+    gap: 4.2rem;
+  }
+  &__hamburger {
+    cursor: pointer;
+  }
+
+  //?######################  Mobile ######################?\\
+  &__mobile {
+    @extend %navbarType;
+
+    display: none;
+    @include respond(phone) {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 2.4rem;
+    }
+  }
+}

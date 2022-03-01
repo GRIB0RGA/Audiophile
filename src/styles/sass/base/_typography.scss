@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+.heading {
+  font-family: "Manrope", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.heading__1 {
+  @include headerMixin(5.6rem, 5.8rem, 0.2rem);
+  &--white {
+    color: $color-white;
+  }
+}
+.heading__2 {
+  @include headerMixin(4rem, 4.4rem, 0.15rem);
+  span {
+    color: $color-primary;
+  }
+}
+.heading__3 {
+  @include headerMixin(3.2rem, 3.6rem, 0.115rem);
+}
+.heading__4 {
+  @include headerMixin(2.8rem, 3.8rem, 0.2rem);
+}
+.heading__5 {
+  @include headerMixin(2.4rem, 3.3rem, 0.17rem);
+}
+.heading__6 {
+  @include headerMixin(1.8rem, 2.4rem, 0.13rem);
+  &--gray-dark {
+    color: $color-secondary-light;
+  }
+}
+.overline {
+  font-family: "Manrope", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  letter-spacing: 1rem;
+  &--white {
+    display: block;
+    color: $color-white;
+    opacity: 0.5;
+  }
+  &--primary {
+    color: $color-primary;
+  }
+}
+.sub-title {
+  font-family: "Manrope", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.1rem;
+}
+
+.text {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: $color-white;
+  &--black {
+    color: $color-secondary-dark;
+  }
+  &--gray-dark {
+    color: $color-secondary-light;
+  }
+  &--gray {
+    color: $color-gray-light;
+  }
+}
+.c-white {
+  color: $color-white;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}

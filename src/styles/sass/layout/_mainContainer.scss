@@ -1,0 +1,18 @@
+.main {
+  max-width: $width-default;
+  margin: 0 auto;
+  position: relative;
+  // background-color: blue;
+  // overflow: hidden;
+  //! Mixins \\\
+  @include respond(desktop) {
+    padding: 0 4rem;
+  }
+
+  &__products,
+  &__pages {
+    display: flex;
+    flex-direction: column;
+    gap: 16rem;
+  }
+}

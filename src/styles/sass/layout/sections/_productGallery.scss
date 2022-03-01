@@ -1,0 +1,50 @@
+.product-gallery {
+  &__img {
+    border-radius: $border-radius-default;
+    transition: all 0.3s;
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 2rem 6rem rgba($color-secondary-dark, 1);
+    }
+
+    &--1 {
+      grid-area: 1/1/2/2;
+    }
+    &--2 {
+      grid-area: 2/1/3/2;
+    }
+    &--3 {
+      grid-area: 1/2/3/3;
+    }
+  }
+}
+
+// .section__product-suggestions {
+//   display: grid;
+//   grid-template-columns: repeat(3, 1fr);
+//   grid-template-rows: min-content 1fr;
+// }
+
+// .suggestion {
+//   &__title {
+//     grid-area: 1/1/2/4;
+//     text-align: center;
+//   }
+//   &__1 {
+//     grid-area: 2/1/4/2;
+//     margin-top: 32rem;
+
+//     position: relative;
+//     &::after {
+//       content: "";
+//       position: absolute;
+//       top: -32rem;
+//       left: 0;
+//       height: 32rem;
+//       width: 100%;
+//       background-image: url(../assets/product-xx99-mark-one-headphones/desktop/image-product.jpg);
+//       background-size: cover;
+//       background-repeat: no-repeat;
+//     }
+//   }
+// }

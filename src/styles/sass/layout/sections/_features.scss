@@ -1,0 +1,20 @@
+.features {
+  &__text,
+  &__box {
+    @include flexColumnGap(3.2rem);
+  }
+}
+
+.box {
+  &__list {
+    @include flexColumnGap(0.8rem);
+  }
+  &__item {
+    @extend .text;
+    color: $color-secondary-light;
+    @include flexRowGap(2.1rem);
+  }
+  &__quantity {
+    color: $color-primary;
+  }
+}
