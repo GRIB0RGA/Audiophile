@@ -1,7 +1,8 @@
+//! REFACTORED \\\
+
 .section__categories {
   max-width: $width-default;
   @include flexRowGap(3rem);
-
   margin: 0 auto;
   &--main {
     margin-top: 20rem;
@@ -9,33 +10,22 @@
   //! Mixins \\\
   @include respond(tablet) {
     max-width: $width-tablet;
-    @include flexRowGap(3rem);
-    flex-direction: column;
-    align-items: center;
-    gap: 6.8rem;
+    @include flexColumnAlignCenterWithGap(6.8rem);
   }
 }
 
 .categories {
   &__card {
+    @include widthAndHeight(35rem, 20rem);
+    @include flexColumnAlignCenterWithGap(2rem);
     background-color: #f1f1f1;
-    width: 35rem;
-    height: 20rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
     position: relative;
     border-radius: $border-radius-default;
   }
   &__img {
-    position: absolute;
+    @include positionAbsoluteTopLeftRight(-27%, 0, 0);
     height: 16rem;
-    top: -27%;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
   }
   &__heading {
     margin-top: 10rem;

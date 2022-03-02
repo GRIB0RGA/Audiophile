@@ -1,3 +1,5 @@
+//! REFACTORED \\\
+
 .footer {
   width: 100%;
   min-height: 36.5rem;
@@ -15,12 +17,11 @@
     position: relative;
     &::before {
       content: "";
-      width: 10rem;
-      height: 0.4rem;
+      @include widthAndHeight(10rem, 0.4rem);
+      @include positionAbsoluteTopLeft(0, 0);
       background-color: $color-primary;
-      position: absolute;
-      top: 0;
-      left: 0;
+
+      //! MIXINS \\\
       @include respond(phone-rotated) {
         left: 50%;
         transform: translateX(-50%);
@@ -32,6 +33,8 @@
     display: grid;
     grid-template-columns: 1fr max-content;
     grid-template-rows: repeat(2, 1fr);
+
+    //! MIXINS \\\
     @include respond(phone-rotated) {
       grid-template-rows: repeat(3, 1fr);
       text-align: center;
@@ -39,9 +42,8 @@
   }
   &__paragraph {
     width: 54rem;
-    // width: 100%;
     grid-area: 1/1/2/2;
-    // text-align: center;
+    //! MIXINS \\\
     @include respond(phone-rotated) {
       width: 100%;
       grid-area: 1/1/2/4;
@@ -57,10 +59,9 @@
     grid-area: 2/2/3/3;
     align-self: center;
     justify-self: end;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.6rem;
+    @include flexAlignAndJustifyCenterWithGap(1.6rem);
+
+    //! MIXINS \\\
     @include respond(desktop) {
       align-self: end;
     }

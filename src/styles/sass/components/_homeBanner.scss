@@ -1,3 +1,5 @@
+//! REFACTORED \\\
+
 .home-banner {
   width: 100%;
   display: grid;
@@ -15,19 +17,12 @@
 
   &::after {
     content: " ";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    background-image: linear-gradient(
-        315deg,
-        $color-secondary-2-see-through-2 0%,
-        $color-secondary-2-see-through-2 100%
-      ),
-      url("/src/assets/home/desktop/hero-MAIN.jpeg");
-
+    @include positionAbsoluteTopLeft(0, 0);
+    @include widthAndHeight(100%, 100%);
+    @include backgroundImageWithCustomGradient(
+      $color-secondary-2-see-through-2,
+      "/src/assets/home/desktop/hero-MAIN.jpeg"
+    );
     background-position: 45rem 0rem;
     background-repeat: no-repeat;
     animation: headerAnimation 3s ease-out;
@@ -35,12 +30,10 @@
 
     //! Mixins \\\
     @include respond(desktop) {
-      background-image: linear-gradient(
-          315deg,
-          $color-secondary-2-see-through 0%,
-          $color-secondary-2-see-through 100%
-        ),
-        url("/src/assets/home/desktop/hero-MAIN.jpeg");
+      @include backgroundImageWithCustomGradient(
+        $color-secondary-2-see-through-2,
+        "/src/assets/home/desktop/hero-MAIN.jpeg"
+      );
       background-position: center;
       ackground-size: contain;
     }
@@ -49,9 +42,7 @@
     }
   }
   &__title {
-    display: flex;
-    flex-direction: column;
-    gap: 2.4rem;
+    @include flexColumnGap(2.4rem);
     animation: moveInRight 3s ease-out;
     z-index: 3;
     h1 {

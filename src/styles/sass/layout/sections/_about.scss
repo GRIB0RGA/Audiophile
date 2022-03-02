@@ -1,3 +1,5 @@
+//! REFACTORED \\\
+
 .section__about {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -7,33 +9,34 @@
   &--main {
     margin-top: 20rem;
   }
+
+  //! MIXINS \\\
   @include respond(tablet) {
-    display: flex;
-    flex-direction: column-reverse;
+    @include flexColumnReverse;
   }
 }
 
 .about {
   &__title {
     @include applyGapOnH2PButton;
+
+    //! MIXINS \\\
     @include respond(tablet) {
-     text-align: center;
+      text-align: center;
     }
   }
   &__image {
     border-radius: $border-radius-default;
     background-image: url("/src/assets/shared/desktop/image-best-gear.jpg");
-    width: 100%;
-    height: 100%;
-    background-size: contain;
+    @include widthAndHeight(100%, 100%);
+    @include backgroundSizeAndPosition(contain, left);
     background-repeat: no-repeat;
-    background-position: left;
+
+    //! MIXINS \\\
     @include respond(tablet) {
       background-image: url("/src/assets/shared/tablet/image-best-gear.jpg");
-      background-size: cover;
-      background-position: top;
+      @include backgroundSizeAndPosition(cover, top);
       height: 30rem;
     }
-   
   }
 }

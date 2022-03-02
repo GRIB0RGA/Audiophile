@@ -204,7 +204,7 @@ ul {
     z-index: 1; }
     @media (max-width: 69.3em) {
       .home-banner::after {
-        background-image: linear-gradient(315deg, rgba(14, 14, 14, 0.726) 0%, rgba(14, 14, 14, 0.726) 100%), url("/src/assets/home/desktop/hero-MAIN.jpeg");
+        background-image: linear-gradient(315deg, rgba(14, 14, 14, 0.507) 0%, rgba(14, 14, 14, 0.507) 100%), url("/src/assets/home/desktop/hero-MAIN.jpeg");
         background-position: center;
         ackground-size: contain; } }
     @media (max-width: 40em) {
@@ -277,11 +277,11 @@ ul {
   .btn__text:hover, .btn__text--with-arrow:hover {
     color: #d87d4a; }
   .btn__text--with-arrow::after {
+    content: "";
+    display: inline-block;
     position: absolute;
     top: 25%;
     left: 120%;
-    display: inline-block;
-    content: "";
     width: 2rem;
     height: 2rem;
     background: url(../assets/shared/desktop/icon-arrow-right.svg) no-repeat; }
@@ -327,15 +327,14 @@ ul {
   margin-top: 16rem;
   display: flex;
   flex-direction: column;
-  gap: 16rem;
   align-items: center;
+  gap: 16rem;
   position: relative; }
   .zigzag__card {
     min-height: 56rem;
     display: flex;
-    margin: 0 auto;
-    gap: 12.5rem;
-    align-items: center; }
+    align-items: center;
+    gap: 12.5rem; }
     .zigzag__card:nth-child(2n) {
       flex-direction: row-reverse; }
     @media (max-width: 49em) {
@@ -474,8 +473,8 @@ ul {
         display: none; } }
   .navbar__list {
     display: flex;
-    gap: 3.4rem;
-    align-items: center; }
+    align-items: center;
+    gap: 3.4rem; }
   .navbar__link {
     font-family: "Manrope", sans-serif;
     text-transform: uppercase;
@@ -531,10 +530,10 @@ ul {
       content: "";
       width: 10rem;
       height: 0.4rem;
-      background-color: #d87d4a;
       position: absolute;
       top: 0;
-      left: 0; }
+      left: 0;
+      background-color: #d87d4a; }
       @media (max-width: 40em) {
         .footer__container::before {
           left: 50%;
@@ -616,30 +615,28 @@ ul {
     .section__categories {
       max-width: 69rem;
       display: flex;
-      gap: 3rem;
       flex-direction: column;
       align-items: center;
       gap: 6.8rem; } }
 
 .categories__card {
-  background-color: #f1f1f1;
   width: 35rem;
   height: 20rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  background-color: #f1f1f1;
   position: relative;
   border-radius: 0.8rem; }
 
 .categories__img {
   position: absolute;
-  height: 16rem;
   top: -27%;
   left: 0;
   right: 0;
-  margin-left: auto;
-  margin-right: auto; }
+  height: 16rem;
+  margin: 0 auto; }
 
 .categories__heading {
   margin-top: 10rem; }
@@ -681,10 +678,10 @@ ul {
 
 .product__zx7 {
   grid-area: 2/1/3/3;
+  align-self: stretch;
   background-image: url("../assets/home/desktop/image-speaker-zx7.jpg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  align-self: stretch;
   display: flex;
   align-items: center;
   border-radius: 0.8rem; }
@@ -717,30 +714,29 @@ ul {
       grid-area: 4/1/5/3; } }
 
 .product__img-zx9 {
-  background-image: url("/src/assets/home/desktop/image-speaker-zx9.png");
   height: 48rem;
-  position: absolute;
+  background-size: 7rem;
+  background-position: 11.7rem;
+  background-image: url("/src/assets/home/desktop/image-speaker-zx9.png");
   background-size: contain;
-  background-repeat: no-repeat;
-  position: relative;
   background-position: center;
-  top: 7rem;
-  left: 11.7rem; }
+  background-repeat: no-repeat;
+  position: relative; }
   @media (max-width: 69.3em) {
     .product__img-zx9 {
       top: 0;
       left: 0;
-      background-image: url("/src/assets/home/tablet/image-speaker-zx9.png");
       width: 20rem;
       height: 100%;
+      background-image: url("/src/assets/home/tablet/image-speaker-zx9.png");
       margin-bottom: 6.4rem; } }
 
 .product__img-yx1 {
-  width: 100%;
-  height: 100%;
   background-image: url("/src/assets/home/desktop/image-earphones-yx1.jpg");
   background-size: cover;
   background-position: center;
+  width: 100%;
+  height: 100%;
   grid-area: 3/1/4/2;
   border-radius: 0.8rem; }
   @media (max-width: 69.3em) {
@@ -764,10 +760,10 @@ ul {
       text-align: center; } }
 
 .product__title-zx7, .product__title-yx1 {
-  margin-left: 9.5rem;
   display: flex;
   flex-direction: column;
-  gap: 3.2rem; }
+  gap: 3.2rem;
+  margin-left: 9.5rem; }
 
 .section__about {
   display: grid;
@@ -796,8 +792,8 @@ ul {
   width: 100%;
   height: 100%;
   background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left; }
+  background-position: left;
+  background-repeat: no-repeat; }
   @media (max-width: 49em) {
     .about__image {
       background-image: url("/src/assets/shared/tablet/image-best-gear.jpg");

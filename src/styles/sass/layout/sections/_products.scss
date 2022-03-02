@@ -1,3 +1,5 @@
+//! REFACTORED \\\
+
 .section__products {
   margin-top: 16.8rem;
   display: grid;
@@ -7,6 +9,7 @@
   grid-column-gap: 3rem;
   align-items: center;
 
+  //! MIXINS \\\
   @include respond(phone-rotated) {
     grid-template-rows: 1fr 32rem 32rem 32rem;
   }
@@ -31,8 +34,7 @@
 
     //! Mixins \\\
     @include respond(desktop) {
-      display: flex;
-      flex-direction: column;
+      @include flexColumn;
       @include importAndAdjustBackground(
         "../assets/home/desktop/pattern-circles.svg",
         50%,
@@ -45,12 +47,10 @@
 
   &__zx7 {
     grid-area: 2/1/3/3;
+    align-self: stretch;
     //prettier-ignore
     @include  importAndAdjustBackground("../assets/home/desktop/image-speaker-zx7.jpg",0,0);
-
-    align-self: stretch;
-    display: flex;
-    align-items: center;
+    @include flexAlignCenter;
     border-radius: $border-radius-default;
 
     //! Mixins \\\
@@ -61,8 +61,7 @@
         -1rem,
         0
       );
-      background-size: cover;
-      background-position: center;
+      @include backgroundSizeAndPosition(cover, center);
     }
     @include respond(phone) {
       width: 100%;
@@ -71,8 +70,7 @@
         -1rem,
         0
       );
-      background-size: cover;
-      background-position: center;
+      @include backgroundSizeAndPosition(cover, center);
     }
   }
 
@@ -81,10 +79,11 @@
   &__yx1 {
     grid-area: 3/2/4/3;
     align-self: stretch;
-    display: flex;
-    align-items: center;
+    @include flexAlignCenter;
     background-color: $color-white-dark;
     border-radius: $border-radius-default;
+
+    //! MIXINS \\\
     @include respond(phone-rotated) {
       grid-area: 4/1/5/3;
     }
@@ -93,43 +92,36 @@
   //?######################  IMAGES ######################?\\
   &__img {
     &-zx9 {
-      background-image: url("/src/assets/home/desktop/image-speaker-zx9.png");
       height: 48rem;
+      @include backgroundSizeAndPosition(7rem, 11.7rem);
 
-      position: absolute;
-      background-size: contain;
+      background-image: url("/src/assets/home/desktop/image-speaker-zx9.png");
+      @include backgroundSizeAndPosition(contain, center);
       background-repeat: no-repeat;
       position: relative;
-      background-position: center;
-      top: 7rem;
-      left: 11.7rem;
 
       //! Mixins \\\
       @include respond(desktop) {
-        top: 0;
-        left: 0;
+        @include topLeft(0, 0);
+        @include widthAndHeight(20rem, 100%);
         background-image: url("/src/assets/home/tablet/image-speaker-zx9.png");
-        width: 20rem;
-        height: 100%;
         margin-bottom: 6.4rem;
       }
     }
     &-yx1 {
-      width: 100%;
-      height: 100%;
       background-image: url("/src/assets/home/desktop/image-earphones-yx1.jpg");
-      background-size: cover;
-      background-position: center;
+      @include backgroundSizeAndPosition(cover, center);
+      @include widthAndHeight(100%, 100%);
       grid-area: 3/1/4/2;
       border-radius: $border-radius-default;
 
+      //! MIXINS \\\
       @include respond(desktop) {
         background-image: url("/src/assets/home/tablet/image-earphones-yx1.jpg");
       }
 
       @include respond(phone-rotated) {
         background-image: url("/src/assets/home/mobile/image-earphones-yx1.jpg");
-
         grid-area: 3/1/4/3;
       }
     }
@@ -140,9 +132,9 @@
     &-zx9 {
       width: 35rem;
       justify-self: center;
-      display: flex;
-      flex-direction: column;
-      gap: 2.4rem;
+      @include flexColumnGap(2.4rem);
+
+      //! MIXINS \\\
       @include respond(desktop) {
         align-items: center;
         justify-content: center;
@@ -150,10 +142,8 @@
       }
     }
     &-zx7 {
+      @include flexColumnGap(3.2rem);
       margin-left: 9.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 3.2rem;
     }
     &-yx1 {
       @extend .product__title-zx7;

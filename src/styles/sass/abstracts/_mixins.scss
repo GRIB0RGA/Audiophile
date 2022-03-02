@@ -1,13 +1,39 @@
 //! FLEX MIXINS \\\
 
+//? FLEX ROW \\
+@mixin flexRowGap($gap) {
+  display: flex;
+  gap: $gap;
+}
+
 @mixin flexAlignCenter {
   display: flex;
   align-items: center;
 }
+
+@mixin flexAlignCenterWithGap($gap) {
+  display: flex;
+  align-items: center;
+  gap: $gap;
+}
+
 @mixin flexAlignAndJustifyCenter {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@mixin flexAlignAndJustifyCenterWithGap($gap) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $gap;
+}
+
+//? FLEX COLUMN \\
+
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
 }
 
 @mixin flexColumnGap($gap) {
@@ -15,12 +41,68 @@
   flex-direction: column;
   gap: $gap;
 }
-@mixin flexRowGap($gap) {
+
+@mixin flexColumnReverse {
   display: flex;
+  flex-direction: column-reverse;
+}
+
+@mixin flexColumnAlignCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin flexColumnAlignCenterWithGap($gap) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: $gap;
 }
 
 /////////////////////////////////////
+
+//! WIDTH AND HEIGHTS \\\
+@mixin widthAndHeight($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+//! POSITION ABSOLUTE \\\
+@mixin positionAbsoluteTopLeft($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+@mixin positionAbsoluteTopRight($top, $right) {
+  position: absolute;
+  top: $top;
+  left: $right;
+}
+
+@mixin positionAbsoluteTopLeftRight($top, $left, $right) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  right: $right;
+}
+
+@mixin topLeft($top, $left) {
+  top: $top;
+  left: $left;
+}
+
+//! BACKGROUND IMAGE \\\
+@mixin backgroundImageWithCustomGradient($color, $image) {
+  background-image: linear-gradient(315deg, $color 0%, $color 100%), url($image);
+}
+
+@mixin backgroundSizeAndPosition($size, $position) {
+  background-size: $size;
+  background-position: $position;
+}
+
+/////////////////
 
 @mixin headerMixin($fontSize, $lineHeight, $letterSpacing) {
   @extend .heading;

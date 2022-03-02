@@ -1,10 +1,9 @@
+//! REFACTORED \\\
+
 .btn {
   &__primary {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 16rem;
-    height: 4.8rem;
+    @include flexAlignAndJustifyCenter;
+    @include widthAndHeight(16rem, 4.8rem);
     border-radius: 0.2rem;
     z-index: 2;
     @include linksAndBtn;
@@ -46,21 +45,16 @@
     &--with-arrow {
       @extend .btn__text;
       &::after {
-        position: absolute;
-        top: 25%;
-        left: 120%;
-        display: inline-block;
         content: "";
-        width: 2rem;
-        height: 2rem;
+        display: inline-block;
+        @include positionAbsoluteTopLeft(25%, 120%);
+        @include widthAndHeight(2rem, 2rem);
         background: url(../assets/shared/desktop/icon-arrow-right.svg) no-repeat;
       }
     }
   }
 
   &__go-back {
-    position: absolute;
-    top: -7.6rem;
-    left: 0;
+    @include positionAbsoluteTopLeft(-7.6rem, 0);
   }
 }
