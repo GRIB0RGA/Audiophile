@@ -12,15 +12,39 @@
     max-width: $width-tablet;
     @include flexColumnAlignCenterWithGap(6.8rem);
   }
+  &--navbar {
+    width: 100%;
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: row;
+
+    //! Mixins \\\
+    @include respond(tablet) {
+      gap: 1rem;
+      justify-content: center;
+    }
+    @include respond(phone-rotated) {
+      padding-top: 8rem;
+      padding-bottom: 3rem;
+      @include flexColumnAlignCenterWithGap(6.8rem);
+      justify-content: center;
+    }
+  }
 }
 
 .categories {
   &__card {
+    max-width: 100%;
     @include widthAndHeight(35rem, 20rem);
     @include flexColumnAlignCenterWithGap(2rem);
     background-color: #f1f1f1;
     position: relative;
     border-radius: $border-radius-default;
+
+    //! Mixins \\\
+    @include respond(tablet) {
+      width: 100%;
+    }
   }
   &__img {
     @include positionAbsoluteTopLeftRight(-27%, 0, 0);

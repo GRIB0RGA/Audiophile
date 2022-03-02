@@ -92,6 +92,13 @@
   left: $left;
 }
 
+//! POSITION ABSOLUTE \\\
+@mixin positionFixedTopLeft($top, $left) {
+  position: fixed;
+  top: $top;
+  left: $left;
+}
+
 //! BACKGROUND IMAGE \\\
 @mixin backgroundImageWithCustomGradient($color, $image) {
   background-image: linear-gradient(315deg, $color 0%, $color 100%), url($image);
@@ -171,6 +178,11 @@
   }
   @if $breakpoint == tablet {
     @media (max-width: 49em) {
+      @content;
+    }
+  }
+  @if $breakpoint == min-tablet {
+    @media (min-width: 49.1em) {
       @content;
     }
   }

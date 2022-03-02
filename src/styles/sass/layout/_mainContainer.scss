@@ -12,5 +12,8 @@
   &__products,
   &__pages {
     @include flexColumnGap(16rem);
+    .section__categories {
+      width: 100%;
+    }
   }
 }

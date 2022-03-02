@@ -6,7 +6,22 @@
 }
 
 .navbar {
+  &__container {
+    @include positionFixedTopLeft(0, 0);
+    width: 100%;
+    background-color: $color-secondary-2;
+    display: flex;
+    justify-content: center;
+    min-height: 9.6rem;
+    z-index: 999;
+  }
+  height: 9.6rem;
+  max-width: $width-default;
+  width: 100%;
+
   @include flexAlignCenter;
+
+  z-index: 999;
   //?######################  FOOTER ######################?\\
   &__footer {
     @extend %navbarType;
@@ -55,7 +70,7 @@
   &__tablet {
     @extend %navbarType;
     display: none;
-
+    position: relative;
     //! MIXINS \\\
 
     @include respond(tablet) {
@@ -77,7 +92,7 @@
   //?######################  Mobile ######################?\\
   &__mobile {
     @extend %navbarType;
-
+    position: relative;
     display: none;
 
     //! MIXINS \\\
@@ -86,5 +101,24 @@
       justify-content: space-between;
       padding: 0 2.4rem;
     }
+  }
+  //?######################  Menu ######################?\\
+  &__menu {
+    min-height: 35rem;
+    width: 100%;
+    background-color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 9.6rem;
+    left: 0;
+    z-index: 999;
+
+    @include respond(min-tablet) {
+      display: none;
+    }
+
+    transition: all 1s;
   }
 }
