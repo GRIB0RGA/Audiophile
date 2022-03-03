@@ -270,6 +270,11 @@ ul {
     .btn__primary--black:hover {
       background-color: #4d4d4d;
       color: white; }
+  .btn__primary:hover {
+    transform: scale(1.05); }
+  .btn__primary:active {
+    transform: scale(0.95) translateY(1rem);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); }
 
 .btn__text, .btn__text--with-arrow {
   border: none;
@@ -330,7 +335,11 @@ ul {
   transition: all 0.3s; }
   .quantity__btn:hover {
     color: #d87d4a;
-    opacity: 1; }
+    opacity: 1;
+    transform: scale(1.2); }
+  .quantity__btn:active {
+    transform: scale(0.95);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); }
 
 .zigzag {
   margin-top: 16rem;

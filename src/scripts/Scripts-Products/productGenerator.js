@@ -62,8 +62,6 @@ const productsZigZagGenerator = (currentItem) => {
   main.insertAdjacentHTML("afterbegin", html);
 };
 
-console.log(data);
-
 const sectionFeaturesGenerator = (currentItem) => {
   const zigZagDiv = document.querySelector(`.zigzag`);
 
@@ -170,33 +168,23 @@ const typeGetter = (suggestion) => {
 };
 
 const headphonesAdder = (suggestion) => {
-  console.log(`${typeGetter(suggestion).toLowerCase()}`);
-
   return `${typeGetter(suggestion).toLowerCase()}` === `headphones`
     ? `-${typeGetter(suggestion)}`
     : "";
 };
 const ifSpeakers = (suggestion) => {
-  console.log(typeGetter(suggestion));
-
-  // console.log(typeGetter(suggestion) === "Speaker" ? "s" : "");
-
   return typeGetter(suggestion) === "Speaker" ? "s" : "";
 };
 
 const productSuggestion = (currentItem) => {
   const category = currentItem.category;
   const categoryCapitalized = category[0].toUpperCase() + category.slice(1);
-  console.log(categoryCapitalized);
 
   const suggestions = currentItem.others;
   const suggestionOne = suggestions[0];
 
   const suggestionTwo = suggestions[1];
   const suggestionThree = suggestions[2];
-
-  console.log(suggestionOne);
-  console.log(suggestionThree);
 
   const productGalleryDiv = document.querySelector(`.section__product-gallery`);
 
