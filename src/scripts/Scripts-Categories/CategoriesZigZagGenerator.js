@@ -1,18 +1,13 @@
 import data from "/src/data.json" assert { type: "json" };
-console.log(data);
+
+import { imageRefactorer } from "/src/scripts/Scripts-Helpers/imageRefactorer.js";
+import { folderNameMaker } from "/src/scripts/Scripts-Helpers/folderNameMaker.js";
+import { zigzagDivGenerator } from "/src/scripts/Scripts-Helpers/divZigZagGenerator.js";
 
 const categoryAndNewItemsGenerator = (category) =>
   data.filter((x) => x.category === category).sort((a, b) => b.new - a.new);
 
-const zigzagDivGenerator = (category) => {
-  const main = document.querySelector(`.main`);
-  const html = `<div class="zigzag zigzag--${category}"></div>`;
-  main.insertAdjacentHTML("afterbegin", html);
-};
 
-const imageRefactorer = (img) => `/src${img.slice(1)}`;
-
-const folderNameMaker = (name) => name.split(" ").join("-");
 
 const zigzagCardGenerator = (pageCategory) => {
   const zigzagContainer = document.querySelector(`.zigzag`);

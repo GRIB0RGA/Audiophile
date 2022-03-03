@@ -940,7 +940,8 @@ body {
   gap: 2.1rem; }
 
 .box__quantity {
-  color: #d87d4a; }
+  color: #d87d4a;
+  font-weight: 700; }
 
 .section__product-gallery {
   display: grid;

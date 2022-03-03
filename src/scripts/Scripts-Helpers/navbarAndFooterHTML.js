@@ -52,7 +52,7 @@ export const navbarHTML = `<div class="navbar__container">
           <img class="categories__img" src="/src/assets/shared/desktop/image-category-thumbnail-earphones.png"
             alt="earphones">
           <h6 class="categories__heading heading__6">Earphones</h6>
-          <a class="btn__text--with-arrow" href="/src/components/pages/speakers/speakers.html">Shop</a>
+          <a class="btn__text--with-arrow" href="/src/components/pages/earphones/earphones.html">Shop</a>
         </div>
       </section>
     </div>
