@@ -2,8 +2,27 @@
 
 .zigzag {
   margin-top: 16rem;
-  @include flexColumnAlignCenterWithGap(16rem);
   position: relative;
+
+  //! MIXINS \\\
+  @include respond(desktop) {
+    margin-top: 5rem;
+  }
+  @include respond(tablet) {
+    @include flexColumnAlignCenterWithGap(16rem);
+  }
+  &--categories {
+    @include flexColumnAlignCenterWithGap(16rem);
+
+    //! MIXINS \\\
+    @include respond(desktop) {
+      gap: 0;
+    }
+    @include respond(desktop) {
+      gap: 16rem;
+    }
+  }
+
   //?###################### CARD ######################?\\
   &__card {
     min-height: 56rem;
@@ -11,11 +30,30 @@
     &:nth-child(2n) {
       flex-direction: row-reverse;
     }
-    //! MIXINS \\\
-    @include respond(tablet) {
-      @include flexColumnAlignCenter;
+
+    &--products {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       &:nth-child(2n) {
-        flex-direction: column;
+        flex-direction: row;
+      }
+
+      @include respond(tablet-big) {
+        gap: 3rem;
+      }
+      @include respond(phone-rotated) {
+        &:nth-child(2n) {
+          @include flexColumn;
+        }
+      }
+    }
+    &--categories {
+      //! MIXINS \\\
+      @include respond(tablet) {
+        @include flexColumnAlignCenter;
+        &:nth-child(2n) {
+          flex-direction: column;
+        }
       }
     }
   }
@@ -30,10 +68,22 @@
     @include applyGapOnH2PButton;
     max-width: 44.5rem;
 
-    //! MIXINS \\\
-    @include respond(tablet) {
-      text-align: center;
-      align-items: center;
+    &--products {
+      //! MIXINS \\\
+      @include respond(phone-rotated) {
+        @include alignSelfItemsTextCenter;
+      }
+      @include respond(phone) {
+        align-self: flex-start;
+        align-items: flex-start;
+        text-align: start;
+      }
+    }
+    &--categories {
+      //! MIXINS \\\
+      @include respond(tablet) {
+        @include alignSelfItemsTextCenter;
+      }
     }
   }
 }

@@ -55,6 +55,12 @@
   }
 
   &__go-back {
-    @include positionAbsoluteTopLeft(-7.6rem, 0);
+    align-self: flex-start;
+    @include respond(tablet) {
+      margin-bottom: -16rem;
+    }
+    @include respond(phone-rotated) {
+      margin-bottom: -8rem;
+    }
   }
 }

@@ -1,6 +1,6 @@
 .modal {
   width: 38rem;
-  max-height: 49rem;
+  min-height: 49rem;
   background-color: $color-white;
   position: absolute;
   right: 16.5rem;
@@ -13,6 +13,13 @@
   row-gap: 3.2rem;
 
   transition: all 0.3s;
+
+  @include respond(phone-rotated) {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    top: 13rem;
+  }
 
   &__items-container {
     grid-area: 2/1/3/3;

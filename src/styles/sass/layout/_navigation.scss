@@ -48,7 +48,7 @@
       padding: 0 4rem;
     }
     @include respond(tablet) {
-      display: none;
+      display: none ;
     }
   }
 
@@ -69,7 +69,7 @@
 
   &__tablet {
     @extend %navbarType;
-    display: none;
+    display: none ;
     position: relative;
     //! MIXINS \\\
 
@@ -79,7 +79,7 @@
       padding: 0 4rem;
     }
     @include respond(phone) {
-      display: none;
+      display: none ;
     }
   }
   &__logo-plus-hamburger {
@@ -93,7 +93,7 @@
   &__mobile {
     @extend %navbarType;
     position: relative;
-    display: none;
+    display: none ;
 
     //! MIXINS \\\
     @include respond(phone) {

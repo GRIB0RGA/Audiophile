@@ -1,3 +1,18 @@
+.section__product-suggestions {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: min-content 1fr;
+  grid-column-gap: 3rem;
+  grid-row-gap: 6.4rem;
+
+  @include respond(phone-rotated) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .suggestion {
   @include flexColumnGap(3.2rem);
   align-items: center;

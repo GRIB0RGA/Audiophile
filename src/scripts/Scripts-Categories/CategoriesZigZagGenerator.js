@@ -4,9 +4,9 @@ console.log(data);
 const categoryAndNewItemsGenerator = (category) =>
   data.filter((x) => x.category === category).sort((a, b) => b.new - a.new);
 
-const zigzagDivGenerator = () => {
+const zigzagDivGenerator = (category) => {
   const main = document.querySelector(`.main`);
-  const html = `<div class="zigzag"></div>`;
+  const html = `<div class="zigzag zigzag--${category}"></div>`;
   main.insertAdjacentHTML("afterbegin", html);
 };
 
@@ -26,7 +26,7 @@ const zigzagCardGenerator = (pageCategory) => {
     const newItem =
       i === 0 ? `<p class="overline overline--primary">New product</p>` : ``;
     const html = `
-    <div class="zigzag__card">
+    <div class="zigzag__card zigzag__card zigzag__card--categories">
         <picture>
           <source media="(max-width:500px)"
             srcset="${imageRefactorer(image.mobile)}">
@@ -36,7 +36,7 @@ const zigzagCardGenerator = (pageCategory) => {
             class="zigzag__image" alt="${alt}">
         </picture>
 
-        <div class="zigzag__title">
+        <div class="zigzag__title zigzag__title--categories">
          ${newItem}
           <h1 class="heading__2">${name}</h1>
           <p class="text text--gray-dark">
@@ -57,8 +57,6 @@ const zigzagCardGenerator = (pageCategory) => {
 };
 
 export const pageZigZagGenerator = (category) => {
-  zigzagDivGenerator();
+  zigzagDivGenerator("categories");
   zigzagCardGenerator(category);
 };
-
-

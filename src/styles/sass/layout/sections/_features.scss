@@ -1,7 +1,36 @@
+.section__features {
+  display: grid;
+  grid-template-columns: minmax(65rem, 1fr) 1fr;
+  justify-content: center;
+  gap: 12.5rem;
+  min-height: 32rem;
+  //! Mixins \\\
+  @include respond(desktop) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .features {
-  &__text,
+  &__text {
+    @include flexColumnGap(3.2rem);
+
+    width: 100%;
+  }
   &__box {
     @include flexColumnGap(3.2rem);
+    @include respond(desktop) {
+      max-width: 60%;
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    @include respond(tablet) {
+      max-width: 90%;
+    }
+    @include respond(phone-rotated) {
+      flex-direction: column;
+    }
   }
 }
 

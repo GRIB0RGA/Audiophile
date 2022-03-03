@@ -60,6 +60,11 @@
   gap: $gap;
 }
 
+@mixin alignSelfItemsTextCenter {
+  align-self: center;
+  align-items: center;
+  text-align: center;
+}
 /////////////////////////////////////
 
 //! WIDTH AND HEIGHTS \\\
@@ -183,6 +188,11 @@
   }
   @if $breakpoint == min-tablet {
     @media (min-width: 49.1em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet-big {
+    @media (max-width: 53em) {
       @content;
     }
   }

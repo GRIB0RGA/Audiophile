@@ -1,5 +1,45 @@
+.section__product-gallery {
+  display: grid;
+  min-height: 59rem;
+
+  grid-template-columns: 40rem 60rem;
+  grid-template-rows: repeat(2, 28rem);
+  grid-row-gap: 3.2rem;
+  grid-column-gap: 3rem;
+  transition: all 0.3s;
+
+  //! Mixins \\\
+  @include respond(desktop) {
+    grid-template-columns: 27rem 48rem;
+    grid-template-rows: repeat(2, 17rem);
+    grid-row-gap: 1.6rem;
+    grid-column-gap: 1.8rem;
+    align-self: center;
+  }
+  @include respond(tablet) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 17.4rem) 36.8rem;
+  }
+  @include respond(phone-rotated) {
+    align-self: stretch;
+    gap: 5rem;
+  }
+
+  &:hover .product-gallery__img:not(:hover) {
+    transform: scale(0.95);
+  }
+}
+
 .product-gallery {
   &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-position: 50% 50%;
+
+    // background-size: contain;
+
     border-radius: $border-radius-default;
     transition: all 0.3s;
     &:hover {
@@ -15,36 +55,9 @@
     }
     &--3 {
       grid-area: 1/2/3/3;
+      @include respond(tablet) {
+        grid-area: 3/1/4/2;
+      }
     }
   }
 }
-
-// .section__product-suggestions {
-//   display: grid;
-//   grid-template-columns: repeat(3, 1fr);
-//   grid-template-rows: min-content 1fr;
-// }
-
-// .suggestion {
-//   &__title {
-//     grid-area: 1/1/2/4;
-//     text-align: center;
-//   }
-//   &__1 {
-//     grid-area: 2/1/4/2;
-//     margin-top: 32rem;
-
-//     position: relative;
-//     &::after {
-//       content: "";
-//       position: absolute;
-//       top: -32rem;
-//       left: 0;
-//       height: 32rem;
-//       width: 100%;
-//       background-image: url(../assets/product-xx99-mark-one-headphones/desktop/image-product.jpg);
-//       background-size: cover;
-//       background-repeat: no-repeat;
-//     }
-//   }
-// }
