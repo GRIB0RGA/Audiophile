@@ -11,8 +11,8 @@
     background-color: $color-white-dark;
     border-radius: 0.2rem;
     &--modal {
-      height: 3.2rem;
       width: 9.6rem;
+      height: 3.2rem;
     }
   }
   &__input {
@@ -20,6 +20,7 @@
     border: none;
     text-align: center;
     background-color: inherit;
+    outline: none;
     font-weight: 700;
   }
   &__btn {

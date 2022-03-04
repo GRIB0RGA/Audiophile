@@ -21,9 +21,9 @@ const productsZigZagGenerator = (currentItem) => {
     : "";
 
   const html = `
-  
+  <button class="text text--gray-dark btn__go-back" onclick="history.back()" >Go back</button>
 <div class="zigzag zigzag__products">
-    <button class="text text--gray-dark btn__go-back">Go back</button>
+    
     <div class="zigzag__card zigzag__card--products">
       <picture>
         <source media="(max-width:640px)"

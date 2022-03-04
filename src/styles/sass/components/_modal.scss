@@ -14,6 +14,9 @@
 
   transition: all 0.3s;
 
+  @include respond(tablet-big) {
+    right: 4rem;
+  }
   @include respond(phone-rotated) {
     position: absolute;
     right: 50%;
@@ -28,9 +31,9 @@
     gap: 2.4rem;
   }
   &__item {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 9.6rem;
     align-items: center;
-    justify-content: space-between;
   }
   &__text-side {
     display: grid;
@@ -42,6 +45,10 @@
   }
   #removeAllBtn {
     justify-self: end;
+    align-self: flex-start;
+    &:active {
+      transform: scale(0.95);
+    }
   }
   &__name {
     grid-area: 1/2/2/3;

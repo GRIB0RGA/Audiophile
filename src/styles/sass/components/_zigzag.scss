@@ -11,7 +11,7 @@
   @include respond(tablet) {
     @include flexColumnAlignCenterWithGap(16rem);
   }
-  &--categories {
+  &__categories {
     @include flexColumnAlignCenterWithGap(16rem);
 
     //! MIXINS \\\
@@ -20,6 +20,11 @@
     }
     @include respond(desktop) {
       gap: 16rem;
+    }
+  }
+  &__products {
+    @include respond(tablet-big) {
+      margin-top: 10rem;
     }
   }
 
@@ -33,18 +38,13 @@
 
     &--products {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      &:nth-child(2n) {
-        flex-direction: row;
-      }
+      grid-template-columns: repeat(2, 1fr);
 
       @include respond(tablet-big) {
         gap: 3rem;
       }
       @include respond(phone-rotated) {
-        &:nth-child(2n) {
-          @include flexColumn;
-        }
+        @include flexColumn;
       }
     }
     &--categories {

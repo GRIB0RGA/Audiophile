@@ -5,9 +5,9 @@ import { overlayGenerator } from "./overlayGenerator.js";
 import { navbarResponsive } from "/src/scripts/Scripts-Navigation/navbar.js";
 import { cartModal } from "/src/scripts/Scripts-Navigation/cart.js";
 
-export const makeGeneralBody = (category) => {
+export const makeGeneralBody = (type) => {
   headerAndFooterGenerator();
-  mainGenerator();
+  mainGenerator(type);
   categoriesAndAboutSectionsGenerator();
   overlayGenerator();
   //!NAVIGATION\\

@@ -297,13 +297,12 @@ ul {
     background: url(../assets/shared/desktop/icon-arrow-right.svg) no-repeat; }
 
 .btn__go-back {
-  align-self: flex-start; }
-  @media (max-width: 49em) {
+  position: absolute;
+  top: 5rem;
+  z-index: 995; }
+  @media (max-width: 53em) {
     .btn__go-back {
-      margin-bottom: -16rem; } }
-  @media (max-width: 40em) {
-    .btn__go-back {
-      margin-bottom: -8rem; } }
+      top: 3rem; } }
 
 .quantity__btn-group {
   display: flex;
@@ -317,14 +316,15 @@ ul {
   background-color: #f2f2f2;
   border-radius: 0.2rem; }
   .quantity__input-group--modal {
-    height: 3.2rem;
-    width: 9.6rem; }
+    width: 9.6rem;
+    height: 3.2rem; }
 
 .quantity__input {
   width: 100%;
   border: none;
   text-align: center;
   background-color: inherit;
+  outline: none;
   font-weight: 700; }
 
 .quantity__btn {
@@ -353,17 +353,20 @@ ul {
       flex-direction: column;
       align-items: center;
       gap: 16rem; } }
-  .zigzag--categories {
+  .zigzag__categories {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16rem; }
     @media (max-width: 69.3em) {
-      .zigzag--categories {
+      .zigzag__categories {
         gap: 0; } }
     @media (max-width: 69.3em) {
-      .zigzag--categories {
+      .zigzag__categories {
         gap: 16rem; } }
+  @media (max-width: 53em) {
+    .zigzag__products {
+      margin-top: 10rem; } }
   .zigzag__card {
     min-height: 56rem;
     display: flex;
@@ -373,14 +376,12 @@ ul {
       flex-direction: row-reverse; }
     .zigzag__card--products {
       display: grid;
-      grid-template-columns: 1fr 1fr; }
-      .zigzag__card--products:nth-child(2n) {
-        flex-direction: row; }
+      grid-template-columns: repeat(2, 1fr); }
       @media (max-width: 53em) {
         .zigzag__card--products {
           gap: 3rem; } }
       @media (max-width: 40em) {
-        .zigzag__card--products:nth-child(2n) {
+        .zigzag__card--products {
           display: flex;
           flex-direction: column; } }
     @media (max-width: 49em) {
@@ -428,6 +429,9 @@ ul {
   grid-template-columns: repeat(2, 1fr);
   row-gap: 3.2rem;
   transition: all 0.3s; }
+  @media (max-width: 53em) {
+    .modal {
+      right: 4rem; } }
   @media (max-width: 40em) {
     .modal {
       position: absolute;
@@ -440,9 +444,9 @@ ul {
     flex-direction: column;
     gap: 2.4rem; }
   .modal__item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; }
+    display: grid;
+    grid-template-columns: 1fr 9.6rem;
+    align-items: center; }
   .modal__text-side {
     display: grid;
     height: 6.4rem;
@@ -451,7 +455,10 @@ ul {
     align-items: center;
     column-gap: 1.6rem; }
   .modal #removeAllBtn {
-    justify-self: end; }
+    justify-self: end;
+    align-self: flex-start; }
+    .modal #removeAllBtn:active {
+      transform: scale(0.95); }
   .modal__name {
     grid-area: 1/2/2/3; }
   .modal__price-item {

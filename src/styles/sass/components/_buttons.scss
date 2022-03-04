@@ -49,6 +49,7 @@
     &:hover {
       color: $color-primary;
     }
+
     &--with-arrow {
       @extend .btn__text;
       &::after {
@@ -62,12 +63,16 @@
   }
 
   &__go-back {
-    align-self: flex-start;
-    @include respond(tablet) {
-      margin-bottom: -16rem;
+    position: absolute;
+    top: 5rem;
+    z-index: 995;
+    @include respond(tablet-big) {
+      top: 3rem;
     }
-    @include respond(phone-rotated) {
-      margin-bottom: -8rem;
-    }
+
+    // @include respond(phone-rotated) {
+    //   margin-bottom: -8rem;
+    // }
   }
 }
+

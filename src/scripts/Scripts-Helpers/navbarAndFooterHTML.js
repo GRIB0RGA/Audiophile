@@ -59,7 +59,7 @@ export const navbarHTML = `<div class="navbar__container">
 
     <div class="modal hidden" id="modal">
 
-      <h6 class="heading__6">Cart(3)</h6>
+      <h6 class="heading__6"  >Cart(<span id="itemsInCart" >3</span>)</h6>
 
       <button class="text text--gray-dark" id="removeAllBtn">Remove All</button>
       <!-- <img src="/src/assets/product-xx99-mark-two-headphones/desktop/image-product.jpg" alt=""> -->
@@ -100,9 +100,9 @@ export const footerHTML = `
         <img class="navbar__logo" src="/src/assets/shared/desktop/logo.svg" alt="Logo">
         <ul class="navbar__list">
           <li><a href="/src/home.html" class="navbar__link">Home</a></li>
-          <li><a href="/src/components/pages/headphones.html" class="navbar__link">Headphones</a></li>
-          <li><a href="/src/components/pages/speakers.html" class="navbar__link">Speakers</a></li>
-          <li><a href="/src/components/pages/earphones.html" class="navbar__link">Earphones</a></li>
+          <li><a href="/src/components/pages/headphones/headphones.html" class="navbar__link">Headphones</a></li>
+          <li><a href="/src/components/pages/speakers/speakers.html" class="navbar__link">Speakers</a></li>
+          <li><a href="/src/components/pages/earphones/earphones.html" class="navbar__link">Earphones</a></li>
         </ul>
 
       </div>
