@@ -50,6 +50,8 @@ const zigzagCardGenerator = (pageCategory) => {
 };
 
 export const pageZigZagGenerator = (category) => {
+  
+  
   zigzagDivGenerator("categories");
   zigzagCardGenerator(category);
 };

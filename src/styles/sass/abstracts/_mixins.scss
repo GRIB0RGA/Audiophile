@@ -97,7 +97,7 @@
   left: $left;
 }
 
-//! POSITION ABSOLUTE \\\
+//! POSITION FIXED \\\
 @mixin positionFixedTopLeft($top, $left) {
   position: fixed;
   top: $top;
@@ -114,13 +114,19 @@
   background-position: $position;
 }
 
-/////////////////
+//! OTHER RANDOM HELPERS \\\
 
 @mixin headerMixin($fontSize, $lineHeight, $letterSpacing) {
   @extend .heading;
   font-size: $fontSize;
   line-height: $lineHeight;
   letter-spacing: $letterSpacing;
+}
+
+@mixin makeHeader($height) {
+  display: flex;
+  justify-content: center;
+  height: $height;
 }
 
 @mixin seeProductBtnMaker($BGcolor, $color) {
@@ -159,14 +165,11 @@
   gap: 3.2rem;
 }
 
-@mixin makeHeader($height) {
-  display: flex;
-  justify-content: center;
-  height: $height;
-}
+//! @@@ MEDIA @@@   MIXINS \\\
 
 //69.3 rem 1110px desktop
-//44 rem 784px tablet
+//49 rem 784px tablet
+//54 rem 864px tablet-big
 //40 rem 640px phone-rotated
 //24 rem 384px phone
 
@@ -186,13 +189,9 @@
       @content;
     }
   }
-  @if $breakpoint == min-tablet {
-    @media (min-width: 49.1em) {
-      @content;
-    }
-  }
+
   @if $breakpoint == tablet-big {
-    @media (max-width: 53em) {
+    @media (max-width: 54em) {
       @content;
     }
   }

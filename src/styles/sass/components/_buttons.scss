@@ -64,15 +64,17 @@
 
   &__go-back {
     position: absolute;
-    top: 5rem;
+    top: 17.6rem;
+
     z-index: 995;
     @include respond(tablet-big) {
-      top: 3rem;
+      top: 18.6rem;
     }
-
+    &:hover {
+      color: $color-primary;
+    }
     // @include respond(phone-rotated) {
     //   margin-bottom: -8rem;
     // }
   }
 }
-

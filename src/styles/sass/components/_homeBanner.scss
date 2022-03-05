@@ -35,7 +35,7 @@
         "/src/assets/home/desktop/hero-MAIN.jpeg"
       );
       background-position: center;
-      ackground-size: contain;
+      background-size: contain;
     }
     @include respond(phone-rotated) {
       background-size: contain;

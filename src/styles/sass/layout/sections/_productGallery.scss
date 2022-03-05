@@ -1,27 +1,34 @@
 .section__product-gallery {
-  display: grid;
   min-height: 59rem;
-
-  grid-template-columns: 40rem 60rem;
-  grid-template-rows: repeat(2, 28rem);
+  display: grid;
+  grid-template-columns: minmax(40rem, 1fr) minmax(60rem, 1fr);
+  grid-template-rows: repeat(2, minmax(28rem, 1fr));
   grid-row-gap: 3.2rem;
   grid-column-gap: 3rem;
+  align-self: center;
+  align-content: center;
   transition: all 0.3s;
 
   //! Mixins \\\
   @include respond(desktop) {
-    grid-template-columns: 27rem 48rem;
-    grid-template-rows: repeat(2, 17rem);
+    grid-template-columns: 35rem 52.5rem;
+    grid-template-rows: repeat(2, 25rem);
     grid-row-gap: 1.6rem;
     grid-column-gap: 1.8rem;
-    align-self: center;
   }
   @include respond(tablet) {
+    margin: -10rem 0;
+    grid-template-columns: 28rem 40rem;
+    grid-template-rows: repeat(2, 18rem);
+    grid-row-gap: 1.6rem;
+    grid-column-gap: 1.8rem;
+  }
+
+  @include respond(phone-rotated) {
+    margin: 0;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 17.4rem) 36.8rem;
-  }
-  @include respond(phone-rotated) {
+    grid-template-rows: repeat(2, 22rem) 40rem;
     align-self: stretch;
     gap: 5rem;
   }
@@ -55,7 +62,7 @@
     }
     &--3 {
       grid-area: 1/2/3/3;
-      @include respond(tablet) {
+      @include respond(phone-rotated) {
         grid-area: 3/1/4/2;
       }
     }

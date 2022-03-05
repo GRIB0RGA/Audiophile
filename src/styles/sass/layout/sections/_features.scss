@@ -18,6 +18,7 @@
     width: 100%;
   }
   &__box {
+    align-self: center;
     @include flexColumnGap(3.2rem);
     @include respond(desktop) {
       max-width: 60%;

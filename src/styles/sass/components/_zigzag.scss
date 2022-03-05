@@ -1,7 +1,6 @@
 //! REFACTORED \\\
 
 .zigzag {
-  margin-top: 16rem;
   position: relative;
 
   //! MIXINS \\\
@@ -15,11 +14,12 @@
     @include flexColumnAlignCenterWithGap(16rem);
 
     //! MIXINS \\\
-    @include respond(desktop) {
-      gap: 0;
-    }
+
     @include respond(desktop) {
       gap: 16rem;
+    }
+    @include respond(tablet-big) {
+      gap: 8rem;
     }
   }
   &__products {

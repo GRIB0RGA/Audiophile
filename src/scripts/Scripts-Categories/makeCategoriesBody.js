@@ -9,8 +9,9 @@ import {
   updateCartWithPlusMinus,
 } from "/src/scripts/Scripts-Cart/addToCart.js";
 
-export const makePageBody = (category) => {
-  makeGeneralBody("pages");
+export const makeCategoriesBody = (category) => {
+  makeGeneralBody("pages", category);
+
   pageZigZagGenerator(category);
 
   //!modal

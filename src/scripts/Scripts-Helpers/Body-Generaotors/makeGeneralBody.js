@@ -4,8 +4,8 @@ import { categoriesAndAboutSectionsGenerator } from "./Helpers/categoriesAndAbou
 import { overlayGenerator } from "./Helpers/overlayGenerator.js";
 import { navigationBar } from "/src/scripts/Scripts-Navigation/navigation.js";
 
-export const makeGeneralBody = (type) => {
-  headerAndFooterGenerator();
+export const makeGeneralBody = (type,categories) => {
+  headerAndFooterGenerator(categories);
   mainGenerator(type);
   categoriesAndAboutSectionsGenerator();
   overlayGenerator();

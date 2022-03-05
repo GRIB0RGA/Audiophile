@@ -10,18 +10,26 @@
   }
 
   &__products,
+  &__checkout,
   &__pages {
+    padding-top: 25.6rem;
+    position: relative;
     @include flexColumnGap(16rem);
+    // align-items: center;
+
     .section__categories {
       width: 100%;
     }
     @include respond(tablet-big) {
-      margin-top: 9.6rem;
+      padding-top: 21.6rem;
+    }
+    @include respond(tablet) {
+      padding-top: 21.6rem;
     }
   }
 
-  &__products {
-    margin-top: 9.6rem;
-    position: relative;
+  &__pages {
+    padding-top: 12rem;
+    @include flexColumnGap(16rem);
   }
 }

@@ -1,3 +1,3 @@
-import { makePageBody } from "/src/scripts/Scripts-Categories/makeCategoriesBody.js";
+import { makeCategoriesBody } from "/src/scripts/Scripts-Categories/makeCategoriesBody.js";
 
-makePageBody("earphones");
+makeCategoriesBody("earphones");

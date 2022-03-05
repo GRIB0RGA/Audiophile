@@ -100,7 +100,7 @@ export const navbarHTML = `<div class="navbar__container">
       <h6 class="heading__6  modal__price-total"> $5,396</h6>
 
 
-      <button class="btn__primary btn__primary--orange" id="checkoutBtn">Checkout</button>
+      <a class="btn__primary btn__primary--orange" href="/src/components/checkout/checkout.html" id="checkoutBtn">Checkout</a>
     </div>
   </div> `;
 
@@ -108,7 +108,7 @@ export const footerHTML = `
     <footer id="footer" class="footer">
     <div class="footer__container">
       <div class="navbar__footer">
-        <img class="navbar__logo" src="/src/assets/shared/desktop/logo.svg" alt="Logo">
+        <a href="/src/home.html"><img class="navbar__logo" src="/src/assets/shared/desktop/logo.svg" alt="Logo"></a>
         <ul class="navbar__list">
           <li><a href="/src/home.html" class="navbar__link">Home</a></li>
           <li><a href="/src/components/pages/headphones/headphones.html" class="navbar__link">Headphones</a></li>

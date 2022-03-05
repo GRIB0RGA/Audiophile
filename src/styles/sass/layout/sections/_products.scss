@@ -93,18 +93,17 @@
   &__img {
     &-zx9 {
       height: 48rem;
-      @include backgroundSizeAndPosition(7rem, 11.7rem);
 
-      background-image: url("/src/assets/home/desktop/image-speaker-zx9.png");
-      @include backgroundSizeAndPosition(contain, center);
       background-repeat: no-repeat;
       position: relative;
+      top: 7rem;
+      left: 12.5rem;
 
       //! Mixins \\\
       @include respond(desktop) {
         @include topLeft(0, 0);
         @include widthAndHeight(20rem, 100%);
-        background-image: url("/src/assets/home/tablet/image-speaker-zx9.png");
+
         margin-bottom: 6.4rem;
       }
     }
