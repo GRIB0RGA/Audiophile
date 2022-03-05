@@ -1,7 +1,7 @@
 import data from "/src/data.json" assert { type: "json" };
 
-import { imageRefactorer } from "/src/scripts/Scripts-Helpers/imageRefactorer.js";
-import { folderNameMaker } from "/src/scripts/Scripts-Helpers/folderNameMaker.js";
+import { imageRefactorer } from "/src/scripts/Scripts-Helpers/Functions/imageRefactorer.js";
+import { folderNameMaker } from "/src/scripts/Scripts-Helpers/Functions/folderNameMaker.js";
 
 const getItem = (slug) =>
   data.filter((products) => products.slug.includes(`${slug}`))[0];

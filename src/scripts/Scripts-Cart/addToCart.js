@@ -120,7 +120,7 @@ export const clearCartModal = () => {
     mainStorage = [];
   });
 };
-// getItem(btn).className;...
+
 //? Update cart with item +- buttons \\
 const getItem = (btn) => btn.closest(`.modal__item`);
 
@@ -148,7 +148,6 @@ const updateCartWithPlusMinusBtnFunctionality = (btn, type, storage) => {
 
   const productTitle = getItemProductTitle(btn);
   const currentItem = getCurrentItem(storage, productTitle);
-  console.log(cartInput.value);
 
   if (currentItem) {
     const currentItemInStorage = getIndexOfCurrentItem(storage, currentItem);
@@ -167,12 +166,12 @@ const updateCartWithPlusMinusBtnFunctionality = (btn, type, storage) => {
       if (cartInput.value == 0) {
         removeItem(btn);
         storage.splice(currentItemInStorage, 1);
-        updateStorage(STORAGE_KEY, storage);
+
         updateItemsInCart(storage);
       }
-      updateTotal(storage);
     }
   }
+  updateStorage(STORAGE_KEY, storage);
 };
 
 //! MAIN FUNCTION \\\

@@ -1,4 +1,4 @@
-import { plusMinusBtnFunctiality } from "/src/scripts/Scripts-Helpers/plusMinusButtonsFunctionality.js";
+import { plusMinusBtnFunctiality } from "/src/scripts/Scripts-Helpers/Others/plusMinusButtonsFunctionality.js";
 
 const totalPriceCalculator = (storage) =>
   storage?.reduce((a, b) => a + b.price * b.quantity, 0);

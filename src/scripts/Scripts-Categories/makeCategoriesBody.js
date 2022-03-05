@@ -1,5 +1,5 @@
-import { pageZigZagGenerator } from "/src/scripts/Scripts-Categories/CategoriesZigZagGenerator.js";
-import { makeGeneralBody } from "/src/scripts/Scripts-Helpers/makeGeneralBody.js";
+import { pageZigZagGenerator } from "/src/scripts/Scripts-Categories/Helpers/CategoriesZigZagGenerator.js";
+import { makeGeneralBody } from "/src/scripts/Scripts-Helpers/Body-Generaotors/makeGeneralBody.js";
 
 import { updateModalUI } from "/src/scripts/Scripts-Cart/updateModalUI.js";
 import {

@@ -1,5 +1,4 @@
-import { navbarResponsive } from "/src/scripts/Scripts-Navigation/navbar.js";
-import { cartModal } from "/src/scripts/Scripts-Navigation/cart.js";
+import { navigationBar } from "/src/scripts/Scripts-Navigation/navigation.js";
 
 import { updateModalUI } from "/src/scripts/Scripts-Cart/updateModalUI.js";
 import {
@@ -9,9 +8,7 @@ import {
   updateCartWithPlusMinus,
 } from "/src/scripts/Scripts-Cart/addToCart.js";
 
-cartModal();
-navbarResponsive();
-
+navigationBar();
 updateModalUI(mainStorage, STORAGE_KEY);
 clearCartModal();
 updateCartWithPlusMinus(mainStorage);

@@ -1,7 +1,4 @@
-import {
-  navbarHTML,
-  footerHTML,
-} from "../Scripts-Helpers/navbarAndFooterHTML.js";
+import { navbarHTML, footerHTML } from "../../Others/navbarAndFooterHTML.js";
 
 export const headerAndFooterGenerator = (category) => {
   const body = [...document.getElementsByTagName(`body`)][0];
