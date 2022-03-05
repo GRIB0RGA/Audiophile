@@ -1,7 +1,9 @@
+import { plusMinusBtnFunctiality } from "/src/scripts/Scripts-Helpers/plusMinusButtonsFunctionality.js";
+
 const totalPriceCalculator = (storage) =>
   storage?.reduce((a, b) => a + b.price * b.quantity, 0);
 
-const updateStorage = (key, storageObj) => {
+export const updateStorage = (key, storageObj) => {
   localStorage.setItem(key, JSON.stringify(storageObj));
 };
 
@@ -36,9 +38,9 @@ export const updateCart = (storage) => {
           </div>
 
           <div class="quantity__input-group quantity__input-group--modal">
-            <button class="quantity__btn quantity__btn--minus" id="modal__btn--minus">-</button>
-            <input type="number" name="counter" value="${item.quantity}" class="quantity__input" id="modal__input">
-            <button class="quantity__btn quantity__btn--plus" id="modal__btn--plus">+</button>
+            <button class="quantity__btn quantity__btn--minus modal__btn--minus" id="modal__btn--minus">-</button>
+            <input type="number" name="counter" value="${item.quantity}" class="quantity__input modal__input" id="modal__input">
+            <button class="quantity__btn quantity__btn--plus modal__btn--plus" id="modal__btn--plus">+</button>
           </div>
           
         </div>

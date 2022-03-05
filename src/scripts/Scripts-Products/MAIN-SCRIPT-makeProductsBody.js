@@ -4,12 +4,9 @@ import {
   STORAGE_KEY,
   addToCart,
   clearCartModal,
+  updateCartWithPlusMinus,
 } from "/src/scripts/Scripts-Cart/addToCart.js";
-import {
-  updateItemsInCart,
-  updateModalUI,
-  updateTotal,
-} from "/src/scripts/Scripts-Cart/updateModalUI.js";
+import { updateModalUI } from "/src/scripts/Scripts-Cart/updateModalUI.js";
 import { plusMinusBtnFunctiality } from "/src/scripts/Scripts-Helpers/plusMinusButtonsFunctionality.js";
 import { productGenerator } from "/src/scripts/Scripts-Products/productGenerator.js";
 
@@ -20,11 +17,10 @@ export const productPageGenerator = (product) => {
 
   //! modal
 
-  updateTotal(mainStorage);
-  updateItemsInCart(mainStorage);
   updateModalUI(mainStorage, STORAGE_KEY);
   addToCart();
   clearCartModal();
+  updateCartWithPlusMinus(mainStorage);
 };
 
 // localStorage.clear();
