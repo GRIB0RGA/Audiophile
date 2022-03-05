@@ -157,7 +157,7 @@ ul {
   line-height: 2.5rem;
   letter-spacing: 0.1rem; }
 
-.text, .box__item {
+.text, #itemsInCartCircle, .box__item {
   font-family: "Manrope", sans-serif;
   font-weight: 500;
   font-size: 1.5rem;
@@ -459,6 +459,8 @@ ul {
     align-self: flex-start; }
     .modal #removeAllBtn:active {
       transform: scale(0.95); }
+    .modal #removeAllBtn:hover {
+      color: #d87d4a; }
   .modal__name {
     grid-area: 1/2/2/3; }
   .modal__price-item {
@@ -498,6 +500,9 @@ body {
     gap: 16rem; }
     .main__products .section__categories, .main__pages .section__categories {
       width: 100%; }
+    @media (max-width: 53em) {
+      .main__products, .main__pages {
+        margin-top: 9.6rem; } }
   .main__products {
     margin-top: 9.6rem;
     position: relative; }
@@ -583,7 +588,8 @@ body {
     .navbar__link:hover {
       color: #d87d4a; }
   .navbar__icon {
-    cursor: pointer; }
+    cursor: pointer;
+    position: relative; }
   .navbar__tablet {
     display: none;
     position: relative; }
@@ -624,6 +630,24 @@ body {
     @media (min-width: 49.1em) {
       .navbar__menu {
         display: none; } }
+
+.cart__container {
+  position: relative; }
+
+#itemsInCartCircle {
+  background-color: #d87d4a;
+  color: white;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  z-index: 999; }
 
 .footer {
   width: 100%;

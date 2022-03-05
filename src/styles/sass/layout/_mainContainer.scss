@@ -15,6 +15,9 @@
     .section__categories {
       width: 100%;
     }
+    @include respond(tablet-big) {
+      margin-top: 9.6rem;
+    }
   }
 
   &__products {

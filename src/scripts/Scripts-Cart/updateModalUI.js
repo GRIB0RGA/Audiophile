@@ -1,5 +1,3 @@
-import { plusMinusBtnFunctiality } from "/src/scripts/Scripts-Helpers/Others/plusMinusButtonsFunctionality.js";
-
 const totalPriceCalculator = (storage) =>
   storage?.reduce((a, b) => a + b.price * b.quantity, 0);
 
@@ -16,6 +14,16 @@ export const updateTotal = (storage) => {
 export const updateItemsInCart = (storage) => {
   const itemsInCart = document.getElementById(`itemsInCart`);
   itemsInCart.innerHTML = storage?.length;
+
+  const iconCounter = document.querySelectorAll(`.items-in-cart`);
+  iconCounter.forEach((icon) => {
+    icon.classList.add(`hidden`);
+
+    if (itemsInCart.innerHTML >= 1) {
+      icon.classList.remove(`hidden`);
+      icon.innerHTML = itemsInCart.innerHTML;
+    }
+  });
 };
 
 export const updateCart = (storage) => {

@@ -10,7 +10,11 @@ export const navbarHTML = `<div class="navbar__container">
           <li><a href="/src/components/pages/speakers/speakers.html" class="navbar__link">Speakers</a></li>
           <li><a href="/src/components/pages/earphones/earphones.html" class="navbar__link">Earphones</a></li>
         </ul>
+         <div class="cart__container">
+        <span id="itemsInCartCircle" class="items-in-cart">1</span>
         <img class="navbar__icon" src="/src/assets/shared/desktop/icon-cart.svg" alt="cartIcon">
+        </div>
+       
       </div>
 
 
@@ -20,14 +24,21 @@ export const navbarHTML = `<div class="navbar__container">
           <img class="navbar__hamburger" src="/src/assets/shared/tablet/icon-hamburger.svg" alt="icon-hamburger">
           <a href="/src/home.html"><img class="navbar__logo" src="/src/assets/shared/desktop/logo.svg" alt="Logo"></a>
         </div>
-
+     <div class="cart__container">
+        <span id="itemsInCartCircle" class="items-in-cart">1</span>
         <img class="navbar__icon navbar__icon--tablet" src="/src/assets/shared/desktop/icon-cart.svg" alt="cartIcon">
+        </div>
+        
       </div>
 
       <div class="navbar__mobile">
         <img class="navbar__hamburger" src="/src/assets/shared/tablet/icon-hamburger.svg" alt="icon-hamburger">
         <a href="/src/home.html"><img class="navbar__logo" src="/src/assets/shared/desktop/logo.svg" alt="Logo"></a>
-        <img class="navbar__icon navbar__icon--mobile" src="/src/assets/shared/desktop/icon-cart.svg" alt="cartIcon">
+        <div class="cart__container">
+        <span id="itemsInCartCircle" class="items-in-cart">1</span>
+         <img class="navbar__icon navbar__icon--mobile" src="/src/assets/shared/desktop/icon-cart.svg" alt="cartIcon">
+        </div>
+       
       </div>
 
 

@@ -49,6 +49,9 @@
     &:active {
       transform: scale(0.95);
     }
+    &:hover {
+      color: $color-primary;
+    }
   }
   &__name {
     grid-area: 1/2/2/3;

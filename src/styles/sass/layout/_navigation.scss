@@ -48,7 +48,7 @@
       padding: 0 4rem;
     }
     @include respond(tablet) {
-      display: none ;
+      display: none;
     }
   }
 
@@ -64,12 +64,13 @@
   }
   &__icon {
     cursor: pointer;
+    position: relative;
   }
   //?######################  Tablet ######################?\\
 
   &__tablet {
     @extend %navbarType;
-    display: none ;
+    display: none;
     position: relative;
     //! MIXINS \\\
 
@@ -79,7 +80,7 @@
       padding: 0 4rem;
     }
     @include respond(phone) {
-      display: none ;
+      display: none;
     }
   }
   &__logo-plus-hamburger {
@@ -93,7 +94,7 @@
   &__mobile {
     @extend %navbarType;
     position: relative;
-    display: none ;
+    display: none;
 
     //! MIXINS \\\
     @include respond(phone) {
@@ -121,4 +122,25 @@
 
     transition: all 1s;
   }
+}
+
+.cart__container {
+  position: relative;
+}
+
+#itemsInCartCircle {
+  background-color: $color-primary;
+  color: $color-white;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @extend .text;
+  font-size: 1.1rem;
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  z-index: 999;
 }

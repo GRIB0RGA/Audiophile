@@ -110,6 +110,10 @@ const clearCart = () => {
   itemsInCart.innerHTML = 0;
   modalItemsContainer.innerHTML = ``;
   totalPirce.innerHTML = `$0`;
+  const iconCounter = document.querySelectorAll(`.items-in-cart`);
+  iconCounter.forEach((icon) => {
+    icon.classList.add(`hidden`);
+  });
 };
 //! MAIN FUNCTION \\\
 export const clearCartModal = () => {
@@ -155,7 +159,6 @@ const updateCartWithPlusMinusBtnFunctionality = (btn, type, storage) => {
       cartInput.value++;
       currentItem.quantity++;
       setCurrentItemInStorage(storage, currentItemInStorage, currentItem);
-      updateTotal(storage);
     }
     if (type === "-") {
       cartInput.value--;
@@ -168,9 +171,17 @@ const updateCartWithPlusMinusBtnFunctionality = (btn, type, storage) => {
         storage.splice(currentItemInStorage, 1);
 
         updateItemsInCart(storage);
+        const itemsInCart = document.getElementById(`itemsInCart`);
+        const iconCounter = document.querySelectorAll(`.items-in-cart`);
+        iconCounter.forEach((icon) => {
+          if (itemsInCart.innerHTML === 0) {
+            icon.classList.add(`hidden`);
+          }
+        });
       }
     }
   }
+  updateTotal(storage);
   updateStorage(STORAGE_KEY, storage);
 };
 
