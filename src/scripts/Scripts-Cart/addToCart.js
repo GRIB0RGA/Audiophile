@@ -57,7 +57,7 @@ export const addToCart = () => {
       addInCartBtn
         .closest(`.zigzag__title`)
         .querySelector(`.heading__6`)
-        .innerHTML.slice(1)
+        .innerHTML.replace(/\D/g, "")
     );
 
     const productTitle = addInCartBtn
@@ -65,6 +65,7 @@ export const addToCart = () => {
       .querySelector(`.heading__2`).innerHTML;
 
     const inputValue = Number(productInput.value);
+    console.log(productPrice);
 
     const alreadyStored = mainStorage.filter(
       (product) => product.name === productTitle

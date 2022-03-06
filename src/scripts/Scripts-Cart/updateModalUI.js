@@ -8,7 +8,7 @@ export const updateStorage = (key, storageObj) => {
 export const updateTotal = (storage) => {
   const total = document.querySelector(`.modal__price-total`);
 
-  total.innerHTML = `$ ${totalPriceCalculator(storage).toLocaleString()}`;
+  total.innerHTML = `$ ${totalPriceCalculator(storage)?.toLocaleString()}`;
 };
 
 export const updateItemsInCart = (storage) => {
@@ -42,7 +42,7 @@ export const updateCart = (storage) => {
             <img class="modal__img" src="${item.image}"
               >
             <p class="text text--black bold modal__name">${item.name}</p>
-            <p class="text text--gray-dark bold modal__price-item">$ ${item.price.toLocaleString()}</p>
+            <p class="text text--gray-dark bold modal__price-item">$ ${item.price?.toLocaleString()}</p>
           </div>
 
           <div class="quantity__input-group quantity__input-group--modal">
