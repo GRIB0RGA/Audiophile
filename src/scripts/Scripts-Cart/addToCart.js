@@ -123,7 +123,9 @@ export const clearCartModal = () => {
     clearCart();
     localStorage.clear();
     mainStorage = [];
-    summaryGenerator(mainStorage);
+    if (document.querySelector(`.main__checkout`)) {
+      summaryGenerator(mainStorage);
+    }
   });
 };
 
@@ -183,7 +185,9 @@ const updateCartWithPlusMinusBtnFunctionality = (btn, type, storage) => {
       }
     }
   }
-  summaryGenerator(storage);
+  if (document.querySelector(`.main__checkout`)) {
+    summaryGenerator(mainStorage);
+  }
   updateTotal(storage);
   updateStorage(STORAGE_KEY, storage);
 };

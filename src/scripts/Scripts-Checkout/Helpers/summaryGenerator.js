@@ -1,7 +1,3 @@
-import {
-  mainStorage,
-  STORAGE_KEY,
-} from "/src/scripts/Scripts-Cart/addToCart.js";
 import { totalPriceCalculator } from "/src/scripts/Scripts-Cart/updateModalUI.js";
 
 const summaryItemsGenerator = (storage) => {
@@ -19,10 +15,12 @@ const summaryItemsGenerator = (storage) => {
             <img class="modal__img" src="${item.image}"
               alt="mark2">
             <p class="text text--black bold modal__name">${item.name}</p>
-            <p class="text text--gray-dark bold modal__price-item">$ ${item.price}</p>
+            <p class="text text--gray-dark bold modal__price-item">$ ${item.price.toLocaleString()}</p>
           </div>
 
-          <p class="text text--gray-dark bold summary__quantity">x${item.quantity}</p>
+          <p class="text text--gray-dark bold summary__quantity">x${
+            item.quantity
+          }</p>
         </div>
   `;
 
@@ -35,15 +33,21 @@ const summaryTotalUpdater = (storage) => {
   const summaryVat = document.querySelector(`.summary__price-vat`);
   const summaryGrandToTal = document.querySelector(`.summary__price-grand`);
 
-  summarytotal.innerHTML = `$ ${totalPriceCalculator(storage)}`;
-  summaryVat.innerHTML = summaryGrandToTal.innerHTML = `$ ${
+  summarytotal.innerHTML = `$ ${totalPriceCalculator(
+    storage
+  ).toLocaleString()}`;
+  summaryVat.innerHTML = `$ ${(
+    (totalPriceCalculator(storage) + 50) /
+    5
+  ).toLocaleString()}`;
+
+  summaryGrandToTal.innerHTML = `$ ${(
     totalPriceCalculator(storage) + 50
-  }`;
+  ).toLocaleString()}`;
 };
 
 const paymentMethod = () => {
   const emoneyNum = document.querySelector(`.input__group--emoney`);
-  console.log(emoneyNum);
 
   const emoneyPin = document.querySelector(`.input__group--cash`);
   const cashRadio = document.getElementById(`cash`);

@@ -6,8 +6,7 @@
   min-height: 32rem;
   //! Mixins \\\
   @include respond(desktop) {
-    display: flex;
-    flex-direction: column;
+    @include flexColumn;
   }
 }
 

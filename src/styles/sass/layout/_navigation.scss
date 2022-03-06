@@ -6,6 +6,13 @@
 }
 
 .navbar {
+  height: 9.6rem;
+  max-width: $width-default;
+  width: 100%;
+
+  @include flexAlignCenter;
+
+  z-index: 999;
   &__container {
     @include positionFixedTopLeft(0, 0);
     width: 100%;
@@ -15,13 +22,6 @@
     min-height: 9.6rem;
     z-index: 999;
   }
-  height: 9.6rem;
-  max-width: $width-default;
-  width: 100%;
-
-  @include flexAlignCenter;
-
-  z-index: 999;
   //?######################  FOOTER ######################?\\
   &__footer {
     @extend %navbarType;
