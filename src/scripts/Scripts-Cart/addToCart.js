@@ -65,7 +65,6 @@ export const addToCart = () => {
       .querySelector(`.heading__2`).innerHTML;
 
     const inputValue = Number(productInput.value);
-    console.log(productPrice);
 
     const alreadyStored = mainStorage.filter(
       (product) => product.name === productTitle

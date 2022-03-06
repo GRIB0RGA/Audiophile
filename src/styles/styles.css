@@ -1084,13 +1084,15 @@ body {
 
 .section__checkout {
   background-color: white;
-  padding: 4.8rem; }
+  padding: 4.8rem;
+  border-radius: 0.8rem; }
 
 .section__summary {
   align-self: flex-start;
   max-height: 62rem;
   background-color: white;
   padding: 3.3rem;
+  border-radius: 0.8rem;
   display: flex;
   flex-direction: column;
   gap: 3.1rem; }

@@ -2,12 +2,14 @@
   &__checkout {
     background-color: $color-white;
     padding: 4.8rem;
+    border-radius: $border-radius-default;
   }
   &__summary {
     align-self: flex-start;
     max-height: 62rem;
     background-color: $color-white;
     padding: 3.3rem;
+    border-radius: $border-radius-default;
     @include flexColumnGap(3.1rem);
 
     @include respond(desktop) {
