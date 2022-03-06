@@ -95,6 +95,9 @@ button {
 ul {
   list-style-type: none; }
 
+label {
+  cursor: pointer; }
+
 .heading, .heading__1, .heading__2, .heading__3, .heading__4, .heading__5, .heading__6 {
   font-family: "Manrope", sans-serif;
   text-transform: uppercase;
@@ -135,6 +138,8 @@ ul {
   letter-spacing: 0.13rem; }
   .heading__6--gray-dark {
     color: #00000080; }
+  .heading__6--primary {
+    color: #d87d4a; }
 
 .overline {
   font-family: "Manrope", sans-serif;
@@ -156,6 +161,9 @@ ul {
   font-size: 1.3rem;
   line-height: 2.5rem;
   letter-spacing: 0.1rem; }
+  .sub-title--primary {
+    color: #d87d4a;
+    font-weight: 700; }
 
 .text, #itemsInCartCircle, .box__item {
   font-family: "Manrope", sans-serif;
@@ -509,11 +517,14 @@ body {
     @media (max-width: 49em) {
       .main__products, .main__checkout, .main__pages {
         padding-top: 21.6rem; } }
-  .main__pages {
-    padding-top: 12rem;
-    display: flex;
-    flex-direction: column;
-    gap: 16rem; }
+  .main__checkout {
+    display: grid;
+    grid-template-columns: minmax(73rem, 100%) minmax(35rem, 100%);
+    gap: 3rem; }
+    @media (max-width: 69.3em) {
+      .main__checkout {
+        display: flex;
+        flex-direction: column; } }
 
 .header {
   width: 100%;
@@ -1070,3 +1081,147 @@ body {
     margin-bottom: 0.8rem;
     width: 100%;
     border-radius: 0.8rem; }
+
+.section__checkout {
+  background-color: white;
+  padding: 4.8rem; }
+
+.section__summary {
+  align-self: flex-start;
+  max-height: 62rem;
+  background-color: white;
+  padding: 3.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.1rem; }
+  @media (max-width: 69.3em) {
+    .section__summary {
+      align-self: stretch; } }
+
+.checkout__form {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5.4rem; }
+
+.checkout__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 2.4rem;
+  column-gap: 1.6rem; }
+  @media (max-width: 40em) {
+    .checkout__container {
+      display: flex;
+      flex-direction: column; } }
+
+.input__group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.9rem; }
+  .input__group--name {
+    grid-area: 2/1/3/2; }
+  .input__group--email {
+    grid-area: 2/2/3/3; }
+  .input__group--phone {
+    grid-area: 3/1/4/2; }
+  .input__group--address {
+    grid-area: 2/1/3/3; }
+  .input__group--zip {
+    grid-area: 3/1/4/2; }
+  .input__group--city {
+    grid-area: 3/2/4/3; }
+  .input__group--country {
+    grid-area: 4/1/5/2; }
+  .input__group--emoney {
+    grid-area: 4/1/5/2; }
+    .input__group--emoney label {
+      text-transform: none; }
+  .input__group--cash {
+    grid-area: 4/2/5/3; }
+    .input__group--cash label {
+      text-transform: none; }
+
+.input__field, .radio__group {
+  padding: 1.8rem 2.4rem;
+  box-sizing: border-box;
+  border-radius: 0.8rem;
+  border: 0.5px solid #cfcfcf;
+  background-color: white;
+  outline: none; }
+  .input__field::placeholder, .radio__group::placeholder {
+    font-family: "Manrope", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #969696;
+    letter-spacing: -0.25px; }
+  .input__field:focus, .radio__group:focus {
+    border: 0.5px solid #d87d4a; }
+
+.input__label, .radio__group--title, .radio__label {
+  color: #000000;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.21px;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  position: relative; }
+
+.radio__group:hover {
+  border: 0.5px solid #d87d4a; }
+
+.radio__group--title {
+  grid-area: 2/1/3/2; }
+
+.radio__group--emoney {
+  grid-area: 2/2/3/2; }
+
+.radio__group--cash {
+  grid-area: 3/2/4/2; }
+
+.radio__field {
+  display: none; }
+
+.radio__label {
+  margin-left: 2rem; }
+
+.radio__btn {
+  height: 1.6rem;
+  width: 1.6rem;
+  border: 1px solid #969696;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: -3rem;
+  top: 0.2rem; }
+  .radio__btn::after {
+    content: "";
+    display: block;
+    height: 0.8rem;
+    width: 0.8rem;
+    border-radius: 50%;
+    background-color: #d87d4a;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.2s; }
+
+.radio__field:checked + .radio__label .radio__btn::after {
+  opacity: 1; }
+
+.summary__quantity {
+  justify-self: flex-end; }
+
+.summary__pricings {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem; }
+
+.summary__btn {
+  width: 100%; }
+
+.pricing__field {
+  display: flex;
+  justify-content: space-between; }

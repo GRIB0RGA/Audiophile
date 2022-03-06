@@ -2,9 +2,10 @@ import {
   updateModalUI,
   updateStorage,
   updateTotal,
-  updateCart,
   updateItemsInCart,
 } from "/src/scripts/Scripts-Cart/updateModalUI.js";
+
+import { summaryGenerator } from "/src/scripts/Scripts-Checkout/Helpers/summaryGenerator.js";
 
 //? Local Storage FUNCTIONALITY \\
 export const STORAGE_KEY = `cart`;
@@ -122,6 +123,7 @@ export const clearCartModal = () => {
     clearCart();
     localStorage.clear();
     mainStorage = [];
+    summaryGenerator(mainStorage);
   });
 };
 
@@ -181,6 +183,7 @@ const updateCartWithPlusMinusBtnFunctionality = (btn, type, storage) => {
       }
     }
   }
+  summaryGenerator(storage);
   updateTotal(storage);
   updateStorage(STORAGE_KEY, storage);
 };

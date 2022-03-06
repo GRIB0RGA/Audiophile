@@ -1,4 +1,4 @@
-const totalPriceCalculator = (storage) =>
+export const totalPriceCalculator = (storage) =>
   storage?.reduce((a, b) => a + b.price * b.quantity, 0);
 
 export const updateStorage = (key, storageObj) => {
@@ -8,7 +8,7 @@ export const updateStorage = (key, storageObj) => {
 export const updateTotal = (storage) => {
   const total = document.querySelector(`.modal__price-total`);
 
-  total.innerHTML = `$${totalPriceCalculator(storage)}`;
+  total.innerHTML = `$ ${totalPriceCalculator(storage)}`;
 };
 
 export const updateItemsInCart = (storage) => {
@@ -42,7 +42,7 @@ export const updateCart = (storage) => {
             <img class="modal__img" src="${item.image}"
               >
             <p class="text text--black bold modal__name">${item.name}</p>
-            <p class="text text--gray-dark bold modal__price-item">$${item.price}</p>
+            <p class="text text--gray-dark bold modal__price-item">$ ${item.price}</p>
           </div>
 
           <div class="quantity__input-group quantity__input-group--modal">

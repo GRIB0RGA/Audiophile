@@ -40,7 +40,7 @@ const productsZigZagGenerator = (currentItem) => {
         <p class="text text--gray-dark">
          ${description}
         </p>
-        <h6 class="heading__6">$${price}</h6>
+        <h6 class="heading__6">$ ${price}</h6>
 
         <div class="quantity__btn-group">
           <div class="quantity__input-group">

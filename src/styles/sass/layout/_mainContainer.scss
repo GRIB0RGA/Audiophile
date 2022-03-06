@@ -28,8 +28,13 @@
     }
   }
 
-  &__pages {
-    padding-top: 12rem;
-    @include flexColumnGap(16rem);
+  &__checkout {
+    display: grid;
+    grid-template-columns: minmax(73rem, 100%) minmax(35rem, 100%);
+    gap: 3rem;
+    @include respond(desktop) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
