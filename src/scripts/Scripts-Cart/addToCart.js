@@ -186,7 +186,14 @@ const updateCartWithPlusMinusBtnFunctionality = (btn, type, storage) => {
     }
   }
   if (document.querySelector(`.main__checkout`)) {
-    summaryGenerator(mainStorage);
+    summaryGenerator(storage);
+    const itemX = document.querySelectorAll(`.summary__quantity`)[1];
+    const currentItemName =
+      itemX.previousElementSibling.querySelector(`.modal__name`);
+
+    itemX.innerHTML = `x ${
+      getCurrentItem(storage, currentItemName.innerHTML).quantity
+    }`;
   }
   updateTotal(storage);
   updateStorage(STORAGE_KEY, storage);

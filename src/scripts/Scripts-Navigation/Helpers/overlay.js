@@ -7,8 +7,13 @@ export const exitWithOverlay = () => {
     modal.classList.add(`hidden`);
     navbarMenu.classList.add(`hidden`);
 
-    if (!document.querySelector(`.main__checkout`)) {
+    if (
+      document.querySelector(`.modal__payment`).className.includes("hidden")
+    ) {
       overlay.classList.toggle(`hidden`);
+    }
+    if (!document.querySelector(`.modal__payment`)) {
+      overlay.classList.remove(`hidden`);
     }
   });
 };

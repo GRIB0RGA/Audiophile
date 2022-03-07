@@ -1,11 +1,12 @@
 import { totalPriceCalculator } from "/src/scripts/Scripts-Cart/updateModalUI.js";
 
-const summaryItemsGenerator = (storage) => {
+export const summaryItemsGenerator = (storage) => {
   const summaryItemsContainer = document.querySelector(
     `.summary__items-container`
   );
 
   summaryItemsContainer.innerHTML = ``;
+  console.log(storage);
 
   storage.forEach((item) => {
     const html = `
@@ -18,7 +19,7 @@ const summaryItemsGenerator = (storage) => {
             <p class="text text--gray-dark bold modal__price-item">$ ${item.price.toLocaleString()}</p>
           </div>
 
-          <p class="text text--gray-dark bold summary__quantity">x${
+          <p class="text text--gray-dark bold summary__quantity" >x${
             item.quantity
           }</p>
         </div>

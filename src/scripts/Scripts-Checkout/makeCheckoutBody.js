@@ -13,31 +13,31 @@ import { updateModalUI } from "/src/scripts/Scripts-Cart/updateModalUI.js";
 import { summaryGenerator } from "./Helpers/summaryGenerator.js";
 import { modalPaymentGenerator } from "./Helpers/modalPaymentGenerator.js";
 
-//! body
-headerAndFooterGenerator();
-changeBodyColor();
-checkoutWholeMainGenerator();
-overlayGenerator();
-navigationBar();
+export const makeChckoutBody = () => {
+  //! body
+  headerAndFooterGenerator();
+  changeBodyColor();
+  checkoutWholeMainGenerator();
+  overlayGenerator();
+  navigationBar();
 
-// !cart
-updateModalUI(mainStorage, STORAGE_KEY);
-clearCartModal();
-updateCartWithPlusMinus(mainStorage);
-summaryGenerator(mainStorage);
-modalPaymentGenerator(mainStorage);
+  // !cart
+  updateModalUI(mainStorage, STORAGE_KEY);
+  clearCartModal();
+  updateCartWithPlusMinus(mainStorage);
+  summaryGenerator(mainStorage);
+  modalPaymentGenerator(mainStorage);
 
-//! pay
+  //! pay
 
-const payBtb = document.getElementById(`payBtn`);
-const paymentModal = document.querySelector(`.modal__payment`);
-const overlay = document.querySelector(`.overlay`);
+  const payBtb = document.getElementById(`payBtn`);
+  const paymentModal = document.querySelector(`.modal__payment`);
+  const overlay = document.querySelector(`.overlay`);
 
+  payBtb.addEventListener(`click`, () => {
+    overlay.classList.remove("hidden");
+    paymentModal.classList.remove(`hidden`);
 
-
-payBtb.addEventListener(`click`, () => {
-  overlay.classList.remove("hidden");
-  paymentModal.classList.remove(`hidden`);
-  
-  document.body.style.overflow = `hidden`;
-});
+    document.body.style.overflow = `hidden`;
+  });
+};
