@@ -7,8 +7,13 @@ export const updateStorage = (key, storageObj) => {
 
 export const updateTotal = (storage) => {
   const total = document.querySelector(`.modal__price-total`);
-
+  const paymentTotal = document.querySelector(`.payment__price-grand`);
   total.innerHTML = `$ ${totalPriceCalculator(storage)?.toLocaleString()}`;
+  if (paymentTotal) {
+    paymentTotal.innerHTML = `$ ${totalPriceCalculator(
+      storage
+    )?.toLocaleString()}`;
+  }
 };
 
 export const updateItemsInCart = (storage) => {

@@ -11,6 +11,7 @@ import {
 } from "/src/scripts/Scripts-Cart/addToCart.js";
 import { updateModalUI } from "/src/scripts/Scripts-Cart/updateModalUI.js";
 import { summaryGenerator } from "./Helpers/summaryGenerator.js";
+import { modalPaymentGenerator } from "./Helpers/modalPaymentGenerator.js";
 
 //! body
 headerAndFooterGenerator();
@@ -24,3 +25,19 @@ updateModalUI(mainStorage, STORAGE_KEY);
 clearCartModal();
 updateCartWithPlusMinus(mainStorage);
 summaryGenerator(mainStorage);
+modalPaymentGenerator(mainStorage);
+
+//! pay
+
+const payBtb = document.getElementById(`payBtn`);
+const paymentModal = document.querySelector(`.modal__payment`);
+const overlay = document.querySelector(`.overlay`);
+
+
+
+payBtb.addEventListener(`click`, () => {
+  overlay.classList.remove("hidden");
+  paymentModal.classList.remove(`hidden`);
+  
+  document.body.style.overflow = `hidden`;
+});

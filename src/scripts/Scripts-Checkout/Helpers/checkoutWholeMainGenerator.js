@@ -1,11 +1,12 @@
 const checkoutHtml = `
+<form>
 <main class="main main__checkout" id="main">
     <button class="text text--gray-dark btn__go-back" onclick="history.back()">Go back</button>
     <section class="section__checkout">
 
       <h3 class="heading__3">Checkout</h3>
 
-      <form action="#" class="checkout__form" id="checkoutForm">
+      <div action="#" class="checkout__form" id="checkoutForm">
 
         <div class="checkout__container checkout__container--billing">
           <p class="sub-title sub-title--primary">Billing Details</p>
@@ -64,12 +65,12 @@ const checkoutHtml = `
 
           <div class="input__group input__group--emoney">
             <label for="emoneyNum" class="input__label">e-Money Number</label>
-            <input type="text" id="emoneyNum" class="input__field" minlength="9" maxlength="9" placeholder="238521993"
+            <input type="number" id="emoneyNum" class="input__field" minlength="9" maxlength="9" placeholder="238521993"
               required />
           </div>
           <div class="input__group input__group--cash">
             <label for="emoneyPin" class="input__label">e-Money PIN</label>
-            <input type="email" id="emoneyPin" class="input__field" minlength="4" maxlength="4" placeholder="6891"
+            <input type="number" id="emoneyPin" class="input__field" minlength="4" maxlength="4" placeholder="6891"
               required />
           </div>
 
@@ -81,7 +82,7 @@ const checkoutHtml = `
 
 
 
-      </form>
+      </div>
 
 
 
@@ -134,6 +135,7 @@ const checkoutHtml = `
 
 
   </main>
+  </form>
 `;
 
 export const checkoutWholeMainGenerator = () => {

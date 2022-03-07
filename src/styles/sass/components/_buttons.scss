@@ -54,6 +54,7 @@
       @extend .btn__text;
       &::after {
         content: "";
+        
         display: inline-block;
         @include positionAbsoluteTopLeft(25%, 120%);
         @include widthAndHeight(2rem, 2rem);
